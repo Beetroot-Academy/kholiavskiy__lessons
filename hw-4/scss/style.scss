@@ -1,0 +1,134 @@
+@import "nullstyle.scss";
+
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.title {
+  color: #243447;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.header {
+  &__container {
+    padding-top: 50px;
+    display: flex;
+  }
+  &__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 50%;
+    &::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #243447;
+      border-radius: 50%;
+      margin-right: 8px;
+      transition: border-color 0.3s;
+    }
+    &:hover::before {
+      border-color: orange;
+    }
+  }
+  &__link {
+    color: #243447;
+    transition: color 0.3s;
+    &:hover {
+      color: orange;
+    }
+  }
+}
+
+.expirience,
+.education {
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__position {
+    font-weight: 600;
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  &__company {
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__duration {
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.skills,
+.languages,
+.hobbies {
+  &__item {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border: 2px solid black;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+.hobbies {
+  padding-bottom: 40px;
+}
