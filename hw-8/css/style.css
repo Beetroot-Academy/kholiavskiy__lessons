@@ -76,6 +76,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -114,6 +117,78 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 52px;
   line-height: 1.38;
+  color: #56597A;
+}
+
+.is-flex {
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+}
+.burger__line {
+  position: absolute;
+  left: 4px;
+  width: 16px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #AAAAAB;
+  transition: background-color 0.3s;
+}
+.burger__line--top {
+  top: 6px;
+}
+.burger__line--mid {
+  top: 12px;
+  transform: translateY(-50%);
+}
+.burger__line--bot {
+  bottom: 6px;
+}
+.burger:hover .burger__line {
+  background-color: #F78CB6;
+}
+
+.header::after {
+  content: url(../img/header-logo.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+}
+.header__container {
+  padding-top: 57px;
+  padding-bottom: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navigation {
+  margin-right: 70px;
+}
+.header__navigation-list {
+  display: flex;
+  align-items: center;
+}
+.header__navigation-item:not(:last-child) {
+  margin-right: 71px;
+}
+.header__navigation-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #AAAAAB;
+  transition: color 0.3s;
+}
+.header__navigation-link:hover {
+  color: #F78CB6;
+}
+.header__navigation-link--active {
   color: #56597A;
 }
 

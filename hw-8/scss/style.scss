@@ -6,6 +6,9 @@ $color-pink-pale: #FFF1F9;
 
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -56,6 +59,99 @@ $color-pink-pale: #FFF1F9;
   font-size:   52px;
   line-height: 1.38;
   color: $color-pale;
+}
+
+.is-flex {
+  display: flex;
+  align-items: center;
+  
+}
+
+.burger {
+  width:  24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  
+  
+  &__line {
+    position: absolute;
+    left: 4px;
+    width: 16px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #AAAAAB;
+    transition: background-color 0.3s;
+    
+    &--top {
+      top:  6px;
+    }
+    
+    &--mid {
+      top:  12px;
+      transform: translateY(-50%);
+    }
+    
+    &--bot {
+      bottom:  6px;
+    }
+    
+  }
+  
+  &:hover &__line {
+    background-color: $color-pink;
+  }
+
+}
+
+.header {
+
+  &::after {
+    content: url(../img/header-logo.png);
+    position: absolute;
+    top:   0;
+    right: 0;
+    z-index: -2;
+  }
+
+  &__container {
+    padding-top:    57px;
+    padding-bottom: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navigation {
+    margin-right: 70px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__navigation-item:not(:last-child) {
+    margin-right: 71px;
+  }
+
+  &__navigation-link {
+    font-weight: 500;
+    font-size:  20px;
+    line-height: 1.5;
+    color: #AAAAAB;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-pink;
+    }
+
+    &--active {
+      color: #56597A;
+    }
+
+  }
+  
 }
 
 
