@@ -107,7 +107,6 @@ body {
 .is-flex {
   display: flex;
   align-items: center;
-
 }
 
 .burger {
@@ -219,7 +218,6 @@ body {
   }
 
   &__container {
-    display: flex;
     flex-direction: row-reverse;
   }
 
@@ -266,7 +264,7 @@ body {
 
 .service {
   padding-top: 80px;
-  padding-bottom: 5000px;
+  padding-bottom: 231px;
 
   &__title {
     margin-bottom: 6px;

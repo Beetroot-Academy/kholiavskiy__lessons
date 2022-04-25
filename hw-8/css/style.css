@@ -245,7 +245,6 @@ body {
   bottom: -250px;
 }
 .hero__container {
-  display: flex;
   flex-direction: row-reverse;
 }
 .hero__title {
@@ -283,7 +282,7 @@ body {
 
 .service {
   padding-top: 80px;
-  padding-bottom: 5000px;
+  padding-bottom: 231px;
 }
 .service__title {
   margin-bottom: 6px;
