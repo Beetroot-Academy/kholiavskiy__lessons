@@ -49,8 +49,9 @@ body {
   font-weight:  700;
   font-size:   28px;
   line-height: 1.43;
-  color: $color-pink;
-  text-align: center;
+  color:  $color-pink;
+  text-align:  center;
+  margin-bottom: 15px;
 }
 
 .section-subtitle {
@@ -58,13 +59,51 @@ body {
   font-weight:  700;
   font-size:   52px;
   line-height: 1.38;
-  color: $color-pale;
+  color:  $color-pale;
+  margin-bottom: 24px;
+}
+
+.section-description {
+  font-weight: 400;
+  font-size:  20px;
+  line-height: 1.6;
+  color: #919299;
+  margin-bottom: 40px;
+}
+
+.pink-button {
+  background: $color-pink;
+  border-radius: 4px;
+  box-shadow: 10px 10px 20px rgba(250, 141, 184, 0.2);
+  font-weight: 500;
+  font-size:  20px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin-left: 1px;
+  min-width: 216px;
+  min-height: 66px;
+  justify-content: center;
+  border: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+  
+  .fas {
+    display: block;
+    margin-left: 20px;
+  }
+  
+  &:hover {
+    background: transparent;
+    border-color: $color-pink;
+    color: $color-pink;
+    box-shadow: 0 0 20px 2px rgba(250, 141, 184, 0.8);
+  }
 }
 
 .is-flex {
   display: flex;
   align-items: center;
-  
+
 }
 
 .burger {
@@ -104,22 +143,30 @@ body {
 
 }
 
+
 .header {
-
-  &::after {
-    content: url(../img/header-logo.png);
-    position: absolute;
-    top:   0;
-    right: 0;
-    z-index: -2;
-  }
-
+  position: fixed;
+  top:   0;
+  left:  0;
+  right: 0;
+  z-index: 5;
+  background-color: #fff;
+  
+  
   &__container {
     padding-top:    57px;
     padding-bottom: 57px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &::after {
+      content: url(../img/header-logo.png);
+      position: absolute;
+      top:   0;
+      right: 0;
+      z-index: -1;
+    }
   }
 
   &__navigation {
@@ -155,8 +202,67 @@ body {
 }
 
 
+.hero {
+  padding-top: calc(54px + 144px);
+  margin-bottom: 59px;
+  position: relative;
+
+  &::after {
+    content: url('../img/bloobs-1.png');
+    position: absolute;
+    z-index: -1;
+    bottom: -250px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__title {
+    display: flex;
+    margin-bottom: 29px;
+
+    &::before {
+      display: block;
+      content:  '';
+      width:  36px;
+      height: 40px;
+      margin-right: 7px;
+      border-bottom: 3px solid $color-pink;
+    }
+
+  }
+
+  &__subtitle {
+    display: block;
+    max-width: 599px;
+    width: 100%;
+    font-size: 59px;
+    line-height: 1.16;
+    margin-bottom: 31px;
+  }
+
+  &__description {
+    letter-spacing: 0.02em;
+    margin-bottom: 42px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 532px;
+    object-fit: contain;
+    position: relative;
+    left: -13px;
+    z-index: -1;
+  }
+
+}
+
+
 .service {
   padding-top: 80px;
+  padding-bottom: 5000px;
 
   &__title {
     margin-bottom: 6px;
@@ -174,6 +280,27 @@ body {
     align-items: flex-start;
   }
 
+  &__item-wrapper:hover  &__item{
+    position: relative;
+    z-index: 2;
+    background-color: #F78CB6;
+    transform: rotate(2turn) scale(1.3);
+    box-shadow: 0 0 50px 2px #F78CB6;
+
+    .service__item-title, .fas,
+    .service__item-text {
+      color: #fff;
+    }
+
+    .service__item-link {
+      transform: scale(1);
+    }
+
+    .fas {
+      transform: scale(1.4);
+    }
+  }
+
   &__item {
     padding: 53px 23px 23px;
     max-width:  270px;
@@ -184,6 +311,9 @@ body {
     background-color: $color-pink-pale;
     cursor: pointer;
     border-radius: 8px;
+    box-shadow: 0 0 0px 0px #F78CB6;
+    transition: all .8s ease-in;
+
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -193,21 +323,7 @@ body {
       color: $color-pink;
       font-size: 50px;
       margin-bottom: 38px;
-    }
-
-    &--active {
-      background-color: #F78CB6;
-      cursor: auto;
-
-      .service__item-title, .fas,
-      .service__item-text {
-        color: #fff;
-      }
-
-      .service__item-link {
-        display: block;
-      }
-
+      transition: transform 1.3s ease-in, color 0.8s ease-in-out;
     }
 
   }
@@ -217,6 +333,7 @@ body {
     font-size:   34px;
     line-height: 2.12;
     color: $color-pale;
+    transition: color 0.8s ease-in-out;
   }
 
   &__item-text {
@@ -226,14 +343,17 @@ body {
     text-align: center;
     color: $color-pale;
     margin-bottom: 10px;
+    transition: color 0.8s ease-in-out;
   }
 
   &__item-link {
-    display: none;
+    display: block;
     font-weight: 500;
     font-size:  20px;
     line-height: 1.5;
     color: #FFFFFF;
+    transform: scale(0);
+    transition: transform 1.3s ease-in;
   }
 
   &__link-wrapper {
