@@ -10,6 +10,10 @@ $color-pink-pale: #FFF1F9;
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: url('../img/header-logo.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 
@@ -84,7 +88,7 @@ body {
   min-width: 216px;
   min-height: 66px;
   justify-content: center;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: all 0.3s ease-in-out;
   
   .fas {
@@ -150,23 +154,22 @@ body {
   left:  0;
   right: 0;
   z-index: 5;
-  background-color: #fff;
   
   
   &__container {
     padding-top:    57px;
-    padding-bottom: 57px;
+    padding-bottom: 27px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &::after {
-      content: url(../img/header-logo.png);
-      position: absolute;
-      top:   0;
-      right: 0;
-      z-index: -1;
-    }
+    // &::after {
+    //   content: url(../img/header-logo.png);
+    //   position: absolute;
+    //   top:   0;
+    //   right: 0;
+    //   z-index: -1;
+    // }
   }
 
   &__navigation {
@@ -203,9 +206,10 @@ body {
 
 
 .hero {
-  padding-top: calc(54px + 144px);
+  padding-top: calc(54px + 144px + 30px);
   margin-bottom: 59px;
   position: relative;
+
 
   &::after {
     content: url('../img/bloobs-1.png');
@@ -284,7 +288,7 @@ body {
     position: relative;
     z-index: 2;
     background-color: #F78CB6;
-    transform: rotate(2turn) scale(1.3);
+    transform: rotate(1turn) scale(1.2);
     box-shadow: 0 0 50px 2px #F78CB6;
 
     .service__item-title, .fas,
@@ -297,7 +301,7 @@ body {
     }
 
     .fas {
-      transform: scale(1.4);
+      transform: scale(1.3);
     }
   }
 
@@ -312,8 +316,7 @@ body {
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 0 0px 0px #F78CB6;
-    transition: all .8s ease-in;
-
+    transition: all .6s ease-in;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -323,7 +326,7 @@ body {
       color: $color-pink;
       font-size: 50px;
       margin-bottom: 38px;
-      transition: transform 1.3s ease-in, color 0.8s ease-in-out;
+      transition: transform 1.0s ease-in, color 0.6s ease-in-out;
     }
 
   }
@@ -333,7 +336,7 @@ body {
     font-size:   34px;
     line-height: 2.12;
     color: $color-pale;
-    transition: color 0.8s ease-in-out;
+    transition: color 0.6s ease-in-out;
   }
 
   &__item-text {
@@ -343,7 +346,7 @@ body {
     text-align: center;
     color: $color-pale;
     margin-bottom: 10px;
-    transition: color 0.8s ease-in-out;
+    transition: color 0.6s ease-in-out;
   }
 
   &__item-link {
@@ -353,7 +356,7 @@ body {
     line-height: 1.5;
     color: #FFFFFF;
     transform: scale(0);
-    transition: transform 1.3s ease-in;
+    transition: transform 1.0s ease-in;
   }
 
   &__link-wrapper {
