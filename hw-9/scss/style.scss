@@ -10,10 +10,7 @@ $color-pink-pale: #FFF1F9;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url('../img/header-logo.png');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top right;
+
 }
 
 
@@ -149,12 +146,17 @@ body {
 
 
 .header {
-  position: fixed;
-  top:   0;
-  left:  0;
-  right: 0;
-  z-index: 5;
   
+  &::after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    min-height: 114px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
   
   &__container {
     padding-top:    57px;
@@ -162,14 +164,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    // &::after {
-    //   content: url(../img/header-logo.png);
-    //   position: absolute;
-    //   top:   0;
-    //   right: 0;
-    //   z-index: -1;
-    // }
+    position: fixed;
+    top:   0;
+    left:  0;
+    right: 0;
+    z-index: 4;
   }
 
   &__navigation {
@@ -209,6 +208,20 @@ body {
   padding-top: calc(54px + 144px + 30px);
   margin-bottom: 59px;
   position: relative;
+
+
+  &::before {
+    content: ' ';
+    width: 796px;
+    height: 791px;
+    position: absolute;
+    top:   0;
+    right: 0;
+    z-index: 3;
+    background-image: url(../img/header-logo.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
 
 
   &::after {
@@ -288,7 +301,7 @@ body {
 
   &__item-wrapper:hover  &__item{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     background-color: #F78CB6;
     transform: rotate(1turn) scale(1.2);
     box-shadow: 0 0 50px 2px #F78CB6;
