@@ -80,10 +80,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("../img/header-logo.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top right;
 }
 
 @font-face {
@@ -201,12 +197,15 @@ body {
   background-color: #F78CB6;
 }
 
-.header {
+.header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  min-height: 114px;
+  background-color: #fff;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
+  z-index: 2;
 }
 .header__container {
   padding-top: 57px;
@@ -214,6 +213,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
 }
 .header__navigation {
   margin-right: 70px;
@@ -243,6 +247,18 @@ body {
   padding-top: 228px;
   margin-bottom: 59px;
   position: relative;
+}
+.hero::before {
+  content: " ";
+  width: 796px;
+  height: 791px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background-image: url(../img/header-logo.png);
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 .hero::after {
   content: url("../img/bloobs-1.png");
@@ -305,7 +321,7 @@ body {
 }
 .service__item-wrapper:hover .service__item {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background-color: #F78CB6;
   transform: rotate(1turn) scale(1.2);
   box-shadow: 0 0 50px 2px #F78CB6;
