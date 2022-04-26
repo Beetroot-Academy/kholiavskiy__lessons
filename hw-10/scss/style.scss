@@ -59,9 +59,10 @@ body {
 }
 
 .section-subtitle {
+  display: block;
   font-family: 'MetaPro';
   font-weight:  700;
-  font-size:   52px;
+  font-size:   50px;
   line-height: 1.38;
   color:  $color-pale;
   margin-bottom: 24px;
@@ -107,6 +108,11 @@ body {
 .is-flex {
   display: flex;
   align-items: center;
+}
+
+.full-width {
+  width:     100%;
+  max-width: 100%;
 }
 
 .burger {
@@ -369,6 +375,151 @@ body {
       margin-left: 8px;
     }
 
+  }
+
+}
+
+
+.design-things {
+
+  &::after {
+    content: url('../img/bloobs-2.png');
+    position: absolute;
+    z-index: -1;
+    bottom: -72px;
+    right: 0;
+  }
+  
+  &__container {
+    margin-bottom: 194px;
+    align-items: start;
+  }
+  
+  &__img {
+    margin: 0 79px 0 23px;
+  }
+  
+  &__title {
+    text-align: start;
+  }
+
+}
+
+
+.teamwork {
+
+  &::after {
+    content: url('../img/bloobs-3.png');
+    position: absolute;
+    z-index: -1;
+    bottom: -870px;
+  }
+  
+  &__container {
+    flex-direction: row-reverse;
+    margin-bottom: 194px;
+  }
+  
+  &__img {
+    margin: 0 11px 0 87px;
+    
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+}
+
+
+.swiper {
+  position: relative;
+
+  &__slide {
+    min-height: 449px;
+  }
+
+  &__img {
+    margin: 0 137px 0 53px;
+    
+  }
+
+  &__content {
+    align-self: flex-end;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__text {
+    margin-bottom: 23px;
+    max-width: 400px;
+  }
+
+  &__author {
+    display: block;
+    font-weight:  700;
+    font-size:   28px;
+    line-height: 1.14;
+    color:  #56597A;
+    margin-bottom: 5px;
+  }
+
+  &__author-location {
+    font-weight: 400;
+    font-size:  16px;
+    line-height:   2;
+    color: #ABABAB;
+  }
+
+  &__buttons {
+    justify-content: space-between;
+    min-width: 60px;
+    position: absolute;
+    bottom: 4px;
+    right:  50px;
+    min-height: 40px;
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 100%;
+
+    &--next {
+      text-align: right;
+    }
+
+    .fas {
+      font-size:  25px;
+      color: rgba(86, 89, 122, 0.6);
+      transition: all 0.2s;
+    }
+
+    &:hover .fas{
+      color: $color-pink;
+      transform: translateX(30%);
+    }
+
+    &--prev:hover .fas{
+      color: $color-pink;
+      transform: translateX(-30%);
+    }
+
+  } 
+
+}
+
+.testimonial {
+
+  &__content {
+    position: relative;
+    padding-bottom: 163px;
+  }
+
+  &__header {
+    position: absolute;
+    max-width: 518px;
+    top:   14px;
+    right: 45px;
   }
 
 }

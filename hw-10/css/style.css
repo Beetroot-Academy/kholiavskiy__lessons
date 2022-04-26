@@ -118,9 +118,10 @@ body {
 }
 
 .section-subtitle {
+  display: block;
   font-family: "MetaPro";
   font-weight: 700;
-  font-size: 52px;
+  font-size: 50px;
   line-height: 1.38;
   color: #56597A;
   margin-bottom: 24px;
@@ -164,6 +165,11 @@ body {
 .is-flex {
   display: flex;
   align-items: center;
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
 }
 
 .burger {
@@ -369,6 +375,113 @@ body {
   border: 7px solid transparent;
   border-left: 7px solid #fff;
   margin-left: 8px;
+}
+
+.design-things::after {
+  content: url("../img/bloobs-2.png");
+  position: absolute;
+  z-index: -1;
+  bottom: -72px;
+  right: 0;
+}
+.design-things__container {
+  margin-bottom: 194px;
+  align-items: start;
+}
+.design-things__img {
+  margin: 0 79px 0 23px;
+}
+.design-things__title {
+  text-align: start;
+}
+
+.teamwork::after {
+  content: url("../img/bloobs-3.png");
+  position: absolute;
+  z-index: -1;
+  bottom: -870px;
+}
+.teamwork__container {
+  flex-direction: row-reverse;
+  margin-bottom: 194px;
+}
+.teamwork__img {
+  margin: 0 11px 0 87px;
+}
+.teamwork__title {
+  text-align: start;
+}
+
+.swiper {
+  position: relative;
+}
+.swiper__slide {
+  min-height: 449px;
+}
+.swiper__img {
+  margin: 0 137px 0 53px;
+}
+.swiper__content {
+  align-self: flex-end;
+  width: 100%;
+  max-width: 100%;
+}
+.swiper__text {
+  margin-bottom: 23px;
+  max-width: 400px;
+}
+.swiper__author {
+  display: block;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.14;
+  color: #56597A;
+  margin-bottom: 5px;
+}
+.swiper__author-location {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #ABABAB;
+}
+.swiper__buttons {
+  justify-content: space-between;
+  min-width: 60px;
+  position: absolute;
+  bottom: 4px;
+  right: 50px;
+  min-height: 40px;
+}
+.swiper__button {
+  cursor: pointer;
+  width: 100%;
+}
+.swiper__button--next {
+  text-align: right;
+}
+.swiper__button .fas {
+  font-size: 25px;
+  color: rgba(86, 89, 122, 0.6);
+  transition: all 0.2s;
+}
+.swiper__button:hover .fas {
+  color: #F78CB6;
+  transform: translateX(30%);
+}
+.swiper__button--prev:hover .fas {
+  color: #F78CB6;
+  transform: translateX(-30%);
+}
+
+.testimonial__content {
+  position: relative;
+  padding-bottom: 163px;
+}
+.testimonial__header {
+  position: absolute;
+  max-width: 518px;
+  top: 14px;
+  right: 45px;
 }
 
 /*# sourceMappingURL=style.css.map */
