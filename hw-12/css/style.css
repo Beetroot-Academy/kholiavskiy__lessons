@@ -1,3 +1,357 @@
-input:focus {
-  color: #007BFF;
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+*, input {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.47;
+  letter-spacing: -0.2px;
+  color: #545454;
+}
+*:focus, input:focus {
+  border-color: #007BFF;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #F2F2F2;
+}
+
+.container {
+  background: #FFFFFF;
+  border-radius: 6px;
+  margin: 0 auto;
+  max-width: 540px;
+  width: 100%;
+  min-height: 590px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .container {
+    margin-bottom: 0;
+  }
+}
+input, select {
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 7px 10px;
+  min-height: 38px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+input::placeholder, select::placeholder {
+  opacity: 0.4;
+}
+
+.input--short {
+  max-width: 245px;
+}
+.input--short:not(:last-child) {
+  margin-right: 12px;
+}
+.input__label {
+  display: block;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+.form-row--flex-hor {
+  display: flex;
+}
+
+.submit-button {
+  background: #FFFFFF;
+  border: 1px solid #007BFF;
+  border-radius: 6px;
+  min-height: 38px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007BFF;
+  transition: all 0.3s;
+}
+.submit-button--short {
+  max-width: 150px;
+}
+.submit-button:hover {
+  background: #007BFF;
+  color: #FFFFFF;
+  box-shadow: 0 0 10px 4px rgba(0, 123, 255, 0.3);
+}
+
+.comment {
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  cursor: pointer;
+}
+.radio:not(:last-child) {
+  margin-right: 20px;
+}
+.radio__main {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.radio__mark {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  margin-right: 8px;
+  transition: all 0.15s ease-in-out;
+}
+.radio__main:checked ~ .radio__mark {
+  border: 6px solid #007BFF;
+}
+
+.country-select {
+  position: relative;
+  cursor: pointer;
+  width: 245px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../img/arrows-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 13.75px top 50%;
+}
+
+.terms {
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+.terms__link {
+  color: #007BFF;
+  transition: all 0.3s;
+}
+.terms__link:hover {
+  text-shadow: 0 0 0.65px #007BFF, 0 0 0.65px #007BFF;
+}
+
+.line {
+  max-width: 100%;
+  width: 100%;
+  height: 1px;
+  background: #E4E4E4;
+}
+
+.create-account__title {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: -0.4px;
+  color: #1C1C1C;
+  margin-bottom: 20px;
+}
+.create-account__email {
+  margin-bottom: 7px;
+}
+.create-account__submit-button {
+  margin-bottom: 22px;
+}
+.create-account__terms {
+  max-width: 410px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.create-account__line {
+  margin-bottom: 20px;
+}
+.create-account__no-account-txt {
+  display: block;
+  text-align: center;
+}
+.create-account__no-account-txt a {
+  color: #007BFF;
+  transition: all 0.3s;
+}
+.create-account__no-account-txt a:hover {
+  text-shadow: 0 0 0.4px #007BFF, 0 0 0.4px #007BFF;
+}
+
+.hor-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 9px;
+}
+
+.photo-input-container {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  padding: 7px 10px;
+  min-height: 30px;
+  width: 138px;
+  display: flex;
+  align-items: center;
+  padding: 6px 32px 6px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.photo-input-container::before {
+  content: url("../img/photo-icon.svg");
+  position: absolute;
+  right: 8px;
+}
+
+.photo-input-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.profile__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: -0.4px;
+  color: #1C1C1C;
+  margin-bottom: 20px;
+}
+.profile__photo-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.profile__photo {
+  margin-right: 20px;
+}
+.profile__photo-subcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 11px;
+  align-self: start;
+}
+.profile__photo-comment {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
+}
+.profile__remove-file {
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
