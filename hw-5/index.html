@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shopping List</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">CSS Dinner Shopping List</h1>
+            <span class="header__subtitle">Let’s go to the mall!</span>
+        </div>
+    </header>
+    <main>
+        <section class="shopping-list">
+            <div class="container">
+                <ul class="shopping-list__list">
+                    <li >
+                        <label class="shopping-list__item" for="item1">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item1" id="item1">
+                            <span class="shopping-list__item-name">
+                                A lot of pickles
+                            </span>
+                            <span class="shopping-list__item-comment">
+                                (for the next lessons about CSS)
+                            </span>
+                        </label>
+                    </li>
+                    <li >
+                        <label class="shopping-list__item" for="item2">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item2" id="item2">
+                            <span class="shopping-list__item-name">
+                                10 apples
+                            </span>
+                            <span class="shopping-list__item-comment">
+                                (for more CSS manipulations)
+                            </span>
+                        </label>
+                    </li>
+                    <li >
+                        <label class="shopping-list__item" for="item3">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item3" id="item3">
+                            <span class="shopping-list__item-name">
+                                20 oranges
+                            </span>
+                            <span class="shopping-list__item-comment">
+                                (because they are awesome)
+                            </span>
+                        </label>
+                    </li>
+                    <li >
+                        <label class="shopping-list__item" for="item4">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item4" id="item4">
+                            <span class="shopping-list__item-name">
+                                13 plates
+                            </span>
+                            <span class="shopping-list__item-comment">
+                                (hm... they always dissapear)
+                            </span>
+                        </label>
+                    </li>
+                    <li >
+                        <label class="shopping-list__item" for="item5">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item5" id="item5">
+                            <span class="shopping-list__item-name">
+                                15 bentos
+                            </span>
+                            <span class="shopping-list__item-comment">
+                            </span>
+                        </label>
+                    </li>
+                    <li >
+                        <label class="shopping-list__item" for="item6">
+                            <input class="shopping-list__checkbox" type="checkbox" name="item6" id="item6">
+                            <span class="shopping-list__item-name">
+                                1 bottle of Sake 
+                            </span>
+                            <span class="shopping-list__item-comment">
+                                (for my friends)
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+                <button class="shopping-list__accept">
+                    Bon appetit :)
+                </button>
+            </div>
+        </section>
+    </main>
+<script src="js/script.js"></script>
+</body>
+
+</html>
