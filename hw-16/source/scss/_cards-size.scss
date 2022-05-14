@@ -1,0 +1,13 @@
+@use "variables" as my-variable;
+
+@mixin cards-size($min: 33.3%, $mid: 50%, $max: 100%) {
+  width: $min;
+
+  @media screen and (max-width: my-variable.$tablet) {
+    width: $mid;
+  }
+
+  @media screen and (max-width: my-variable.$mobile) {
+    width: $max;
+  }
+}
