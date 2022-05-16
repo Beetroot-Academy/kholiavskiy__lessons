@@ -253,7 +253,7 @@ body {
     font-size: 40px;
     line-height: 130%;
     color: $black;
-    $args: (20px 40px fs,
+    $args: (30px 40px fs,
     );
     @include fluid-ultra($args);
 }
@@ -318,6 +318,68 @@ body {
         &__text-content {
             display: block;
             padding-bottom: 100px;
+        }
+
+        &__title,
+        &__description {
+            text-align: start;
+        }
+    }
+}
+
+
+//ABOUT-US
+.about-us {
+    &__container {
+        $args: (20px 30px pt,
+            15px 25px pb,
+            80px 150px mb,
+        );
+        @include fluid-ultra($args);
+        @include flex-column-align-centered();
+        background: rgba(240, 99, 184, 0.15);
+    }
+
+    &__img-container {
+        max-width: 477px;
+        width: 100%;
+        $args: (25px 40px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__text-content {
+        @include flex-column-align-centered();
+        max-width: 475px;
+        width: 100%;
+    }
+
+    &__title {
+        $args: (20px 40px mb,
+        );
+        @include fluid-ultra($args);
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .about-us {
+        &__container {
+            @include flex-row-align-centered();
+            border-radius: 50px;
+        }
+
+        &__img-container {
+            margin: 0 62px 0 11px;
+        }
+
+        &__text-content {
+            display: block;
         }
 
         &__title,
