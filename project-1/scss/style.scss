@@ -331,15 +331,20 @@ body {
 
 //ABOUT-US
 .about-us {
+
+    $args: (10px 40px pl,
+        10px 40px pr,
+    );
+    @include fluid-ultra($args);
+
     &__container {
         $args: (20px 30px pt,
             15px 25px pb,
             80px 150px mb,
-        );
+            10px 50px border-radius);
         @include fluid-ultra($args);
         @include flex-column-align-centered();
         background: rgba(240, 99, 184, 0.15);
-        box-shadow: 0 0 20px 15px rgba(240, 99, 184, 0.15)
     }
 
     &__img-container {
@@ -371,9 +376,10 @@ body {
 
 @media screen and (min-width:$desktop) {
     .about-us {
+        padding: 0;
+
         &__container {
             @include flex-row-align-centered();
-            border-radius: 50px;
             box-shadow: none;
         }
 
@@ -560,5 +566,131 @@ body {
         $args: (50px 100px mb,
         );
         @include fluid-ultra($args);
+    }
+}
+
+
+///bloks which first used in testimonials
+.testimonial-item {
+    background-color: $white;
+    box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+    $args: (10px 20px border-radius,
+        30px 60px pt,
+        35px 70px pl,
+        35px 70px pr,
+        25px 50px pb,
+    );
+    @include fluid-ultra($args);
+    @include flex-column-align-centered;
+    align-items: flex-start;
+
+    &__photo {
+        @include wh(60px);
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        max-width: 385px;
+        width: 100%;
+    }
+
+    &__name {
+        font-family: 'Avenir';
+        font-weight: 900;
+        font-size: 16px;
+        letter-spacing: 0.005em;
+        color: $black;
+    }
+
+    &__link {
+        font-family: 'Avenir';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: $main-purple;
+        transition: text-decoration 0.3s;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__feedback {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 180%;
+        color: $gray;
+    }
+}
+
+
+@media screen and (min-width:$tablet) {
+    .testimonial-item {
+        flex-direction: row;
+
+        &__photo {
+            @include wh(90px);
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+
+        &__info {
+            padding-top: 20px;
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+
+        &__link {
+            font-size: 14px;
+            margin-bottom: 19px;
+        }
+
+        &__feedback {
+            font-size: 16px;
+        }
+    }
+}
+
+
+///TESTIMONIALS
+.testimonials {
+    $args: (10px 40px pl,
+        10px 40px pr,
+    );
+    @include fluid-ultra($args);
+
+    &__container {
+        $args: (80px 110px pt,
+            50px 133px pb,
+            40px 80px pr,
+            40px 80px pl,
+            80px 150px mb,
+            10px 50px border-radius);
+
+        @include fluid-ultra($args);
+        @include flex-column-align-centered;
+        background-color: $main-purple;
+    }
+
+    &__title {
+        color: $white;
+        $args: (30px 85px mb,
+        );
+        @include fluid-ultra($args);
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .testimonials {
+        padding: 0;
+
+        &__title {
+            align-self: start;
+        }
     }
 }
