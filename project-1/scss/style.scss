@@ -1,7 +1,6 @@
 @use 'nullstyle' as *;
 @use 'variables' as *;
 @use 'mixin' as *;
-@use 'variables' as *;
 
 
 ::selection {
@@ -20,7 +19,7 @@ body {
 
 
 .container {
-    max-width: 1160;
+    max-width: 1160px;
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
@@ -121,10 +120,12 @@ body {
     width: 100%;
     min-height: 50px;
     padding: 10px 10px;
+    padding-left: 14px;
     @include flex-row-align-centered(center);
     gap: 10px;
     font-weight: 800;
     font-size: 14px;
+    line-height: 1;
     letter-spacing: 0.005em;
     color: $black;
     background-color: $white;
@@ -149,6 +150,7 @@ body {
         width: 100%;
         min-height: 60px;
         padding: 10px 20px;
+        padding-left: 24px;
         gap: 20px;
         font-size: 16px;
     }
@@ -182,6 +184,145 @@ body {
         &__right-side {
             gap: 40px;
             width: 100%;
+        }
+    }
+}
+
+
+///bloks which first used in Header
+.btn-no-arrow {
+    max-width: 150px;
+    width: 100%;
+    min-height: 50px;
+    padding: 8px 10px;
+    @include flex-row-align-centered(center);
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 50px;
+    color: $black;
+    border: 1px solid transparent;
+    line-height: 1;
+    transition: all 0.3s;
+
+    &--purple {
+        color: $white;
+        background-color: $main-purple;
+
+        &:hover {
+            color: $main-pink;
+            border-color: $main-pink;
+            background-color: $white;
+            box-shadow: 0px 5px 30px 4px rgba($main-pink, .5);
+        }
+    }
+
+    &--pink {
+        color: $white;
+        background-color: $main-pink;
+
+        &:hover {
+            color: $main-purple;
+            border-color: $main-purple;
+            background-color: $white;
+            box-shadow: 0px 5px 30px 4px rgba($main-purple, .5);
+        }
+
+    }
+}
+
+
+@media screen and (min-width:$tablet) {
+    .btn-no-arrow {
+        max-width: 170px;
+        min-height: 60px;
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+
+
+.image {
+    @include wh(100%);
+    object-fit: cover;
+}
+
+
+.section-title {
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    color: $black;
+    $args: (20px 40px fs,
+    );
+    @include fluid-ultra($args);
+}
+
+
+///HERO
+.hero {
+    &__container {
+        $args: (80px 100px pt,
+            80px 100px mb,
+        );
+        @include fluid-ultra($args);
+        @include flex-column-align-centered();
+    }
+
+    &__img-container {
+        max-width: 885px;
+        width: 100%;
+        $args: (25px 40px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__text-content {
+        @include flex-column-align-centered();
+        max-width: 645px;
+        width: 100%;
+    }
+
+    &__title {
+        $args: (40px 80px fs,
+            20px 50px mb,
+        );
+        @include fluid-ultra($args);
+        line-height: 1.1;
+        text-align: center;
+        max-width: 645px;
+    }
+
+    &__description {
+        $args: (20px 50px mb, );
+        @include fluid-ultra($args);
+        text-align: center;
+        max-width: 380px;
+    }
+}
+
+@media screen and (min-width:$desktop) {
+    .hero {
+
+        &__container {
+            align-items: start;
+            background-image: url('../img/image-hero.png');
+            background-repeat: no-repeat;
+            background-position: bottom right 20px;
+        }
+
+        &__img-container {
+            display: none;
+        }
+
+        &__text-content {
+            display: block;
+            padding-bottom: 100px;
+        }
+
+        &__title,
+        &__description {
+            text-align: start;
         }
     }
 }

@@ -117,6 +117,10 @@
       $new-property: margin;
     }
 
+    @else if $property ==fs {
+      $new-property: font-size;
+    }
+
 
     $min-no-unit : strip-units($min);
     $max-no-unit : strip-units($max);
