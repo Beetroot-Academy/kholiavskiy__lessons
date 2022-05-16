@@ -1,0 +1,11 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'variables' as *;
+
+
+
+::selection {
+    background: rgba(240, 99, 184, 0.4);
+    color: $color-main-purple;
+}
