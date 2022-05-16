@@ -301,6 +301,7 @@ body {
     }
 }
 
+
 @media screen and (min-width:$desktop) {
     .hero {
 
@@ -338,6 +339,7 @@ body {
         @include fluid-ultra($args);
         @include flex-column-align-centered();
         background: rgba(240, 99, 184, 0.15);
+        box-shadow: 0 0 20px 15px rgba(240, 99, 184, 0.15)
     }
 
     &__img-container {
@@ -372,6 +374,7 @@ body {
         &__container {
             @include flex-row-align-centered();
             border-radius: 50px;
+            box-shadow: none;
         }
 
         &__img-container {
@@ -386,5 +389,176 @@ body {
         &__description {
             text-align: start;
         }
+    }
+}
+
+
+///bloks which first used in features
+.flex-block {
+    @include flex-column-align-centered;
+}
+
+
+@media screen and (min-width:$desktop) {
+    .flex-block {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 50px;
+    }
+}
+
+
+.flex-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 530px;
+    width: 100%;
+    min-height: 358px;
+    @include flex-column-align-centered;
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        @include flex-column-align-centered;
+    }
+
+    &__title {
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: $black;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        max-width: 300px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: $gray;
+        margin-bottom: 15px;
+    }
+
+    &__learn-more {
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0.005em;
+        color: $black;
+        display: block;
+        @include flex-row-align-centered;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $main-pink;
+        }
+    }
+
+    &__learn-more:hover &__arrow {
+        color: $main-pink;
+    }
+
+    &__arrow {
+        font-size: 18px;
+        color: $main-purple;
+        margin-left: 10px;
+        transition: color 0.3s;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .flex-item {
+        padding-top: 50px;
+        padding-bottom: 33px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+
+        &--first {
+            background-image: url(../img/background-1.png);
+        }
+
+        &--second {
+            background-image: url(../img/background-2.png);
+        }
+
+        &--third {
+            background-image: url(../img/background-3.png);
+        }
+
+        &--fourth {
+            background-image: url(../img/background-4.png);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &__image {
+            margin-bottom: 0;
+        }
+
+        &__info {
+            align-items: flex-start;
+            margin-right: 50px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            max-width: 220px;
+            font-size: 16px;
+            text-align: start;
+            margin-bottom: 20px;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        &__learn-more {
+            font-size: 16px;
+        }
+
+        &__arrow {
+            font-size: 20px;
+        }
+    }
+}
+
+
+///FEATURES
+.features {
+    &__container {
+        $args: (80px 150px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__title {
+        $args: (30px 50px mb,
+        );
+        @include fluid-ultra($args);
+        text-align: center;
+    }
+
+    &__description {
+        max-width: 584px;
+        text-align: center;
+        margin: 0 auto;
+        $args: (50px 100px mb,
+        );
+        @include fluid-ultra($args);
     }
 }
