@@ -140,32 +140,46 @@ body {
 }
 .nav__list {
   position: fixed;
-  top: -100%;
+  top: 90px;
   right: 0;
   left: 0;
+  transform: scaleY(0);
+  transform-origin: top;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  gap: 10px;
-  transition: top 0.3s ease-in;
+  transition: transform 0.2s ease-in;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(240, 99, 184, 0.6);
+  cursor: pointer;
+}
+.nav__item {
+  border-top: 1px solid rgba(240, 99, 184, 0.6);
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.nav__item:hover .nav__link {
+  color: #F063B8;
 }
 .nav__link {
-  font-size: 20px;
+  font-size: 22px;
   transition: color 0.2 ease;
   color: #4B5D68;
+  line-height: 1;
 }
 @media screen and (min-width: 1160px) {
   .nav__link {
     font-size: 16px;
   }
 }
-.nav__link:hover {
-  color: #F063B8;
-}
 .nav__checkbox:checked + .nav__list {
-  top: 100px;
+  transform: scaleY(1);
 }
 
 @media screen and (min-width: 820px) {
@@ -179,12 +193,21 @@ body {
     display: none;
   }
   .nav__list {
+    transform: scaleY(1);
     position: static;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 40px;
+    background-color: transparent;
+    border-bottom: none;
+  }
+  .nav__item {
+    border-top: none;
+    width: unset;
+    padding: 0;
+    display: block;
   }
 }
 .demo-btn {
@@ -228,6 +251,13 @@ body {
     font-size: 16px;
   }
 }
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
 .header__container {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -243,8 +273,14 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
+.header__nav {
+  order: 1;
+}
 
 @media screen and (min-width: 820px) {
+  .header {
+    position: static;
+  }
   .header__container {
     padding-top: 50px;
     padding-bottom: 30px;
@@ -254,6 +290,9 @@ body {
   .header__right-side {
     gap: 40px;
     width: 100%;
+  }
+  .header__nav {
+    order: 0;
   }
 }
 .btn-no-arrow {

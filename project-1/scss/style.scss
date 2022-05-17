@@ -70,30 +70,44 @@ body {
 
     &__list {
         position: fixed;
-        top: -100%;
+        top: 90px;
         right: 0;
         left: 0;
+        transform: scaleY(0);
+        transform-origin: top;
         @include flex-column-align-centered;
-        gap: 10px;
-        transition: top 0.3s ease-in;
+        transition: transform 0.2s ease-in;
+        background-color: $white;
+        border-bottom: 1px solid rgba($main-pink, .6);
+        cursor: pointer;
+    }
+
+    &__item {
+        border-top: 1px solid rgba($main-pink, .6);
+        width: 100%;
+        padding: 16px;
+        @include flex-row-align-centered(center);
+    }
+
+    &__item:hover &__link {
+        color: $main-pink;
     }
 
     &__link {
-        font-size: 20px;
+        font-size: 22px;
         transition: color 0.2 ease;
         color: $gray;
+        line-height: 1;
 
         @media screen and (min-width:$desktop) {
             font-size: 16px;
         }
 
-        &:hover {
-            color: $main-pink;
-        }
+
     }
 
     &__checkbox:checked+&__list {
-        top: 100px;
+        transform: scaleY(1)
     }
 }
 
@@ -108,9 +122,19 @@ body {
         }
 
         &__list {
+            transform: scaleY(1);
             position: static;
             @include flex-row-align-centered;
             gap: 40px;
+            background-color: transparent;
+            border-bottom: none;
+        }
+
+        &__item {
+            border-top: none;
+            width: unset;
+            padding: 0;
+            display: block;
         }
     }
 }
@@ -158,6 +182,12 @@ body {
 
 ///HEADER 
 .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $white;
+
     &__container {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -169,11 +199,18 @@ body {
         gap: 20px;
     }
 
+    &__nav {
+        order: 1;
+    }
+
 }
 
 
 @media screen and (min-width:$tablet) {
+
     .header {
+        position: static;
+
         &__container {
             padding-top: 50px;
             padding-bottom: 30px;
@@ -184,6 +221,10 @@ body {
         &__right-side {
             gap: 40px;
             width: 100%;
+        }
+
+        &__nav {
+            order: 0;
         }
     }
 }
