@@ -303,11 +303,15 @@ body {
 ///HERO
 .hero {
     &__container {
-        $args: (80px 100px pt,
-            80px 100px mb,
+        padding-top: calc(80px + 90px);
+        $args: (80px 100px mb,
         );
         @include fluid-ultra($args);
         @include flex-column-align-centered();
+
+        @media screen and (min-width:$tablet) {
+            padding-top: 80px;
+        }
     }
 
     &__img-container {
@@ -347,6 +351,7 @@ body {
     .hero {
 
         &__container {
+            padding-top: 100px;
             align-items: start;
             background-image: url('../img/image-hero.png');
             background-repeat: no-repeat;
