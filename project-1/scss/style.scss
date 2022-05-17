@@ -620,7 +620,7 @@ body {
     &__feedback {
         font-size: 16px;
         font-weight: 400;
-        line-height: 180%;
+        line-height: 1.8;
         color: $gray;
     }
 }
@@ -650,7 +650,7 @@ body {
         }
 
         &__feedback {
-            font-size: 16px;
+            font-size: 18px;
         }
     }
 }
@@ -691,6 +691,273 @@ body {
 
         &__title {
             align-self: start;
+        }
+    }
+}
+
+
+///list for footer
+
+.help-list {
+    margin-bottom: 20px;
+
+    &__title {
+        font-weight: 900;
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+
+    &__link {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 250%;
+        color: $black;
+        text-align: center;
+        transition: color 0.3s;
+    }
+
+    &__item:hover &__link {
+        color: $main-pink;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .help-list {
+        margin-bottom: 0;
+
+        &__title {
+            text-align: start;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        &__link {
+            font-size: 16px;
+            color: $black;
+            text-align: start;
+        }
+    }
+}
+
+.smm {
+    &__list {
+        display: flex;
+        gap: 14px;
+    }
+
+    &__link {
+        @include wh(50px);
+        border-radius: 50px;
+        background-color: rgba($black, .1);
+        @include flex-row-align-centered(center);
+        transition: background-color 0.3s;
+    }
+
+    &__icon {
+        fill: $white;
+        @include wh(16px);
+        transition: fill 0.3s;
+
+
+        &--f {
+            width: 9.58px;
+            height: 20.49px;
+        }
+
+        &--twitter {
+            width: 18.27px;
+            height: 15.07px;
+        }
+    }
+
+    &__item:hover &__link {
+        background-color: rgba($main-pink, .3);
+    }
+
+    &__item:hover &__icon {
+        fill: $main-purple;
+    }
+}
+
+.all-rights {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: $black;
+    $args: (40px 100px pt,
+    );
+    @include fluid-ultra($args);
+    max-width: 300px;
+    text-align: center;
+}
+
+@media screen and (min-width:$desktop) {
+    .all-rights {
+        font-size: 12px;
+        max-width: 300px;
+        text-align: start;
+    }
+}
+
+///FOOTER
+.footer {
+
+    border-top: 2px solid rgba($main-purple, 0.2);
+
+    &__container {
+        $args: (50px 100px pt,
+            50px 100px mb,
+        );
+
+        @include fluid-ultra($args);
+    }
+
+    &__row,
+    &__title-container,
+    &__co-info,
+    &__text-container,
+    &__about-help,
+    &__smm,
+    &__buttons {
+        @include flex-column-align-centered;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        margin-bottom: 35px;
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__co-name {
+        font-family: 'Avenir';
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 160%;
+        color: $black;
+        margin-bottom: 40px;
+    }
+
+    &__adress {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        color: $black;
+        max-width: 250px;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    &__link {
+        font-family: 'Avenir';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        color: $black;
+        transition: color 0.3s;
+        margin-bottom: 5px;
+
+        &:hover {
+            color: $main-pink;
+        }
+    }
+
+
+
+}
+
+@media screen and (min-width:1050px) {
+    .footer {
+
+        &__title-container,
+        &__co-info {
+            display: block;
+        }
+
+        &__row,
+        &__about-help,
+        &__buttons {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__text-container {
+            align-items: start;
+        }
+
+        &__about-help {
+            gap: 150px;
+            margin-right: 32px;
+        }
+
+        &__row {
+            justify-content: space-between;
+
+            &--first {
+                align-items: center;
+                margin-bottom: 150px;
+            }
+        }
+
+        &__buttons {
+            align-items: center;
+            gap: 30px;
+            width: 410px;
+        }
+
+        &__btn {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        &__logo {
+            display: inline-block;
+            margin-bottom: 67px;
+            margin-right: 20px;
+        }
+
+        &__co-name {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+
+        &__adress {
+            text-align: start;
+        }
+
+        &__link {
+            margin-bottom: 0;
         }
     }
 }
