@@ -479,6 +479,7 @@ body {
 
     &__info {
         @include flex-column-align-centered;
+        height: 100%;
     }
 
     &__title {
@@ -638,6 +639,7 @@ body {
     &__info {
         max-width: 385px;
         width: 100%;
+        min-height: 200px;
     }
 
     &__name {
