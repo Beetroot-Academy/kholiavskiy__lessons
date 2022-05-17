@@ -14,3 +14,31 @@ $gray: #4B5D68;
 //  font-weight: 500;
 //  font-size: 18px;
 //  line-height: 160%;
+
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/avenir_ff/AvenirLTStd-Roman.otf);
+}
+
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  src: url(fonts/avenir_ff/AvenirLTStd-Black.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  src: url(fonts/helvetica_bold.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  src: url(fonts/helvetica_regular.otf);
+}

@@ -74,6 +74,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/avenir_ff/AvenirLTStd-Roman.otf);
+}
+@font-face {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  src: url(fonts/avenir_ff/AvenirLTStd-Black.otf);
+}
+@font-face {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  src: url(fonts/helvetica_bold.otf);
+}
+@font-face {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  src: url(fonts/helvetica_regular.otf);
+}
 /* SASS mixin end */
 /* SASS mixin end */
 /* SASS mixin start */
