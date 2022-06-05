@@ -145,6 +145,7 @@ let fractionMath = function (firstObj, secondObj) {
 
 			return divider;
 		},
+
 		summFractions: function () {
 			if (firstObj.denominator == secondObj.denominator) {
 				return this.reductionFraction({
@@ -160,6 +161,7 @@ let fractionMath = function (firstObj, secondObj) {
 				});
 			}
 		},
+
 		reduceFractions: function () {
 			if (firstObj.denominator == secondObj.denominator) {
 				return this.reductionFraction({
@@ -175,18 +177,21 @@ let fractionMath = function (firstObj, secondObj) {
 				});
 			}
 		},
+
 		multiplicationFractions: function () {
 			return this.reductionFraction({
 				numerator: firstObj.numerator * secondObj.numerator,
 				denominator: firstObj.denominator * secondObj.denominator,
 			});
 		},
+
 		divisionFractions: function () {
 			return this.reductionFraction({
 				numerator: firstObj.numerator * secondObj.denominator,
 				denominator: firstObj.denominator * secondObj.numerator,
 			});
 		},
+
 		reductionFraction: function (obj = firstObj) {
 			let divider = this.getBiggestDivider(obj.numerator, obj.denominator);
 
