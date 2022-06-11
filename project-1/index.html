@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Warehouse</title>
+    <style>
+        @font-face {
+            font-family: Avenir;
+            font-style: normal;
+            font-weight: 400;
+            src: url(fonts/avenir_ff/AvenirLTStd-Roman.otf);
+        }
+
+        @font-face {
+            font-family: Avenir;
+            font-style: normal;
+            font-weight: 800;
+            src: url(fonts/avenir_ff/AvenirLTStd-Black.otf);
+        }
+
+        @font-face {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: bold;
+            src: url(fonts/helvetica_bold.otf);
+        }
+
+        @font-face {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            src: url(fonts/helvetica_regular.otf);
+        }
+
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <svg class="logo__icon">
+                    <use xlink:href="img/sprite.svg#Logo"></use>
+                </svg>
+            </a>
+            <div class="header__right-side">
+                <nav class="nav header__nav">
+                    <label class="burger nav__burger material-symbols-outlined" for="menu-toggle">menu</label>
+                    <input type="checkbox" class="nav__checkbox" id="menu-toggle" />
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Help</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#">Signup</a></li>
+                    </ul>
+                </nav>
+                <button class="demo-btn">Request Demo
+                    <span class="demo-btn__arrow material-symbols-outlined">
+                        arrow_right_alt
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__img-container">
+                    <img class="hero__img image" src="img/image-hero.png" alt="funny anime girls">
+                </div>
+                <div class="hero__text-content">
+                    <h1 class="section-title hero__title">Save your data storage here.</h1>
+                    <p class="hero__description">Data Warehouse is a data storage area that has been
+                        tested for security, so you can store your data here
+                        safely but not be afraid of being stolen by others.</p>
+                    <button class="btn-no-arrow btn-no-arrow--purple hero__btn">Learn more</button>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container about-us__container">
+                <div class="about-us__img-container">
+                    <img class="about-us__img image" src="img/image-2ndsection.png" alt="girl looks at data graphiks">
+                </div>
+                <div class="about-us__text-content">
+                    <h2 class="section-title about-us__title">We are a high-level data storage bank</h2>
+                    <p class="about-us__description">The place to store various data that you can access at any time
+                        through the internet and where you can carry it.
+                        This very flexible storage area has a high level of security. To enter into your own data you
+                        must enter the password that you created when you registered in this Data Warehouse.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container features__container">
+                <div class="features__title-container">
+                    <h2 class="section-title features__title">
+                        Features
+                    </h2>
+                    <p class="features__description">
+                        Some of the features and advantages that we provide for those of you who store data in this Data
+                        Warehouse.
+                    </p>
+                </div>
+                <div class="features__flex-element flex-block">
+                    <div class="flex-block__item flex-item flex-item--first">
+                        <div class="flex-item__image">
+                            <img class="hero__img image" src="img/image-1.png" alt="alt">
+                        </div>
+                        <div class="flex-item__info">
+                            <h3 class="flex-item__title">Search Data</h3>
+                            <p class="flex-item__description">Don’t worry if your data is very large, the Data
+                                Warehoue provides a search engine, which is useful for making it easier to find data
+                                effectively saving time.</p>
+                            <a class="flex-item__learn-more" href="#">Learn more
+                                <span class="flex-item__arrow material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-block__item flex-item flex-item--second">
+                        <div class="flex-item__image">
+                            <img class="hero__img image" src="img/image-2.png" alt="alt">
+                        </div>
+                        <div class="flex-item__info">
+                            <h3 class="flex-item__title">24 Hours Access</h3>
+                            <p class="flex-item__description">Access is given 24 hours a full morning to night and
+                                meet again in the morning, giving you comfort when
+                                you need data when urgent.</p>
+                            <a class="flex-item__learn-more" href="#">Learn more
+                                <span class="flex-item__arrow material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-block__item  flex-item flex-item--third">
+                        <div class="flex-item__image">
+                            <img class="hero__img image" src="img/image-3.png" alt="alt">
+                        </div>
+                        <div class="flex-item__info">
+                            <h3 class="flex-item__title">Print Out</h3>
+                            <p class="flex-item__description">Print out service gives you convenience if someday
+                                you need print data, just edit it all and just print it.</p>
+                            <a class="flex-item__learn-more" href="#">Learn more
+                                <span class="flex-item__arrow material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-block__item flex-item flex-item--fourth">
+                        <div class="flex-item__image">
+                            <img class="hero__img image" src="img/image-4.png" alt="alt">
+                        </div>
+                        <div class="flex-item__info">
+                            <h3 class="flex-item__title">Security Code</h3>
+                            <p class="flex-item__description">Data Security is one of our best facilities. Allows
+                                for your files
+                                to be safer. The file can be secured with a code or password that
+                                you created, so only you can open the file.</p>
+                            <a class="flex-item__learn-more" href="#">Learn more
+                                <span class="flex-item__arrow material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container testimonials__container">
+                <h2 class="section-title testimonials__title">Testimonials</h2>
+                <div class="testimonials__card testimonial-item">
+                    <div class="testimonial-item__photo">
+                        <img class="image" src="img/avatar.jpg" alt="avatar">
+                    </div>
+                    <div class="testimonial-item__info">
+                        <h3 class="testimonial-item__name">John Fang</h3>
+                        <a href="wordfaang.com" class="testimonial-item__link">wordfaang.com</a>
+                        <p class="testimonial-item__feedback">Suspendisse ultrices at diam lectus nullam.
+                            Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
+                            laoreet nulla.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__row footer__row--first">
+                <div class="footer__title-container">
+                    <h2 class="section-title footer__title">Try for free!</h2>
+                    <p class="footer__info">Get limited 1 week free try our features!</p>
+                </div>
+                <div class="footer__buttons">
+                    <button class="btn-no-arrow btn-no-arrow--pink footer__btn">Learn more</button>
+                    <button class="demo-btn footer__btn ">Request Demo
+                        <span class="demo-btn__arrow material-symbols-outlined ">
+                            arrow_right_alt
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="footer__row">
+                <div class="footer__co-info">
+                    <a href="#" class="logo footer__logo">
+                        <svg class="logo__icon">
+                            <use xlink:href="img/sprite.svg#Logo"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__co-name">DataWarehouse</a>
+                    <div class="footer__text-container">
+                        <span class="footer__adress">
+                            Warehouse Society, 234
+                            Bahagia Ave Street
+                            PRBW 29281
+                        </span>
+                        <a class="footer__link" href="mailto:info@warehouse.project">info@warehouse.project</a>
+                        <a class="footer__link" href="tel:+1-232-3434">1-232-3434 (Main)</a>
+                    </div>
+                </div>
+                <div class="footer__about-help">
+                    <div class="help-list">
+                        <h4 class="help-list__title">About</h4>
+                        <ul class="help-list__list">
+                            <li class="help-list__item"><a class="help-list__link" href="#">Profile</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Features</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Careers</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">DW News</a></li>
+                        </ul>
+                    </div>
+                    <div class="help-list">
+                        <h4 class="help-list__title">Help</h4>
+                        <ul class="help-list__list">
+                            <li class="help-list__item"><a class="help-list__link" href="#">Support</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Sign up</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Guide</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Reports</a></li>
+                            <li class="help-list__item"><a class="help-list__link" href="#">Q&A</a></li>
+                        </ul>
+                    </div>
+                    <div class="smm footer_smm">
+                        <h4 class="smm__title help-list__title">Social Media</h4>
+                        <ul class="smm__list">
+                            <li class="smm__item">
+                                <a class="smm__link" href="#">
+                                    <svg class="smm__icon smm__icon--f">
+                                        <use xlink:href="img/sprite.svg#f"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="smm__item">
+                                <a class="smm__link" href="#">
+                                    <svg class="smm__icon smm__icon--twitter">
+                                        <use xlink:href="img/sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="smm__item">
+                                <a class="smm__link" href="#">
+                                    <svg class="smm__icon smm__icon--im">
+                                        <use xlink:href="img/sprite.svg#im"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__row">
+                <span class="all-rights">
+                    © Datawarehouse™, 2020. All rights reserved.
+                    Company Registration Number: 21479524.
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

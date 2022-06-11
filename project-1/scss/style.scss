@@ -1,0 +1,1011 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixin' as *;
+
+
+::selection {
+    background: rgba(240, 99, 184, 0.4);
+    color: $main-purple;
+}
+
+
+body {
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: $gray;
+}
+
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+///bloks which first used in Header
+
+.logo {
+    display: block;
+    width: calc(49px * 0.8);
+    height: calc(35px * 0.8);
+    cursor: pointer;
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:$tablet) {
+    .logo {
+        width: 49px;
+        height: 35px;
+
+
+    }
+}
+
+.burger {
+    cursor: pointer;
+    color: $gray;
+    font-size: 40px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $main-pink;
+    }
+}
+
+.nav {
+    @include flex-column-align-centered(center);
+
+    &__checkbox {
+        position: absolute;
+        visibility: hidden;
+        @include wh(0px);
+    }
+
+    &__list {
+        position: fixed;
+        top: 90px;
+        right: 0;
+        left: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        @include flex-column-align-centered;
+        transition: transform 0.2s ease-in;
+        background-color: $white;
+        border-bottom: 1px solid rgba($main-pink, .6);
+        cursor: pointer;
+    }
+
+    &__item {
+        border-top: 1px solid rgba($main-pink, .6);
+        width: 100%;
+        padding: 16px;
+        @include flex-row-align-centered(center);
+    }
+
+    &__item:hover &__link {
+        color: $main-pink;
+    }
+
+    &__link {
+        font-size: 22px;
+        transition: color 0.2 ease;
+        color: $gray;
+        line-height: 1;
+
+        @media screen and (min-width:$desktop) {
+            font-size: 16px;
+        }
+
+
+    }
+
+    &__checkbox:checked+&__list {
+        transform: scaleY(1)
+    }
+}
+
+
+@media screen and (min-width:$tablet) {
+    .nav {
+        @include flex-row-align-centered();
+
+        &__checkbox,
+        &__burger {
+            display: none;
+        }
+
+        &__list {
+            transform: scaleY(1);
+            position: static;
+            @include flex-row-align-centered;
+            gap: 40px;
+            background-color: transparent;
+            border-bottom: none;
+        }
+
+        &__item {
+            border-top: none;
+            width: unset;
+            padding: 0;
+            display: block;
+        }
+    }
+}
+
+.demo-btn {
+    max-width: 180px;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 10px;
+    padding-left: 14px;
+    @include flex-row-align-centered(center);
+    gap: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.005em;
+    color: $black;
+    background-color: $white;
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+
+    &__arrow {
+        font-size: 30px;
+        color: $main-purple;
+    }
+
+    &:hover {
+        background-color: rgba($main-pink, .4);
+        box-shadow: 0px 5px 30px 4px rgba($main-purple, .5);
+    }
+}
+
+@media screen and (min-width:$tablet) {
+    .demo-btn {
+        max-width: 210px;
+        width: 100%;
+        min-height: 60px;
+        padding: 10px 20px;
+        padding-left: 24px;
+        gap: 20px;
+        font-size: 16px;
+    }
+}
+
+///HEADER 
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $white;
+
+    &__container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include flex-row-align-centered(space-between);
+    }
+
+    &__right-side {
+        @include flex-row-align-centered(space-between);
+        gap: 20px;
+    }
+
+    &__nav {
+        order: 1;
+    }
+
+}
+
+
+@media screen and (min-width:$tablet) {
+
+    .header {
+        position: static;
+
+        &__container {
+            padding-top: 50px;
+            padding-bottom: 30px;
+            justify-content: start;
+            gap: 121px;
+        }
+
+        &__right-side {
+            gap: 40px;
+            width: 100%;
+        }
+
+        &__nav {
+            order: 0;
+        }
+    }
+}
+
+
+///bloks which first used in Header
+.btn-no-arrow {
+    max-width: 150px;
+    width: 100%;
+    min-height: 50px;
+    padding: 8px 10px;
+    @include flex-row-align-centered(center);
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 50px;
+    color: $black;
+    border: 1px solid transparent;
+    line-height: 1;
+    transition: all 0.3s;
+
+    &--purple {
+        color: $white;
+        background-color: $main-purple;
+
+        &:hover {
+            color: $main-pink;
+            border-color: $main-pink;
+            background-color: $white;
+            box-shadow: 0px 5px 30px 4px rgba($main-pink, .5);
+        }
+    }
+
+    &--pink {
+        color: $white;
+        background-color: $main-pink;
+
+        &:hover {
+            color: $main-purple;
+            border-color: $main-purple;
+            background-color: $white;
+            box-shadow: 0px 5px 30px 4px rgba($main-purple, .5);
+        }
+
+    }
+}
+
+
+@media screen and (min-width:$tablet) {
+    .btn-no-arrow {
+        max-width: 170px;
+        min-height: 60px;
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+
+
+.image {
+    @include wh(100%);
+    object-fit: cover;
+}
+
+
+.section-title {
+    font-family: 'Helvetica';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    color: $black;
+    $args: (30px 40px fs,
+    );
+    @include fluid-ultra($args);
+}
+
+
+///HERO
+.hero {
+    &__container {
+        padding-top: calc(80px + 90px);
+        $args: (80px 100px mb,
+        );
+        @include fluid-ultra($args);
+        @include flex-column-align-centered();
+
+        @media screen and (min-width:$tablet) {
+            padding-top: 80px;
+        }
+    }
+
+    &__img-container {
+        max-width: 885px;
+        width: 100%;
+        $args: (25px 40px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__text-content {
+        @include flex-column-align-centered();
+        max-width: 645px;
+        width: 100%;
+    }
+
+    &__title {
+        $args: (40px 80px fs,
+            20px 50px mb,
+        );
+        @include fluid-ultra($args);
+        line-height: 1.1;
+        text-align: center;
+        max-width: 645px;
+    }
+
+    &__description {
+        $args: (20px 50px mb, );
+        @include fluid-ultra($args);
+        text-align: center;
+        max-width: 380px;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .hero {
+
+        &__container {
+            padding-top: 100px;
+            align-items: start;
+            background-image: url('../img/image-hero.png');
+            background-repeat: no-repeat;
+            background-position: bottom right 20px;
+        }
+
+        &__img-container {
+            display: none;
+        }
+
+        &__text-content {
+            display: block;
+            padding-bottom: 100px;
+        }
+
+        &__title,
+        &__description {
+            text-align: start;
+        }
+    }
+}
+
+
+//ABOUT-US
+.about-us {
+
+    $args: (10px 40px pl,
+        10px 40px pr,
+    );
+    @include fluid-ultra($args);
+
+    &__container {
+        $args: (20px 30px pt,
+            15px 25px pb,
+            80px 150px mb,
+            10px 50px border-radius);
+        @include fluid-ultra($args);
+        @include flex-column-align-centered();
+        background: rgba(240, 99, 184, 0.15);
+    }
+
+    &__img-container {
+        max-width: 477px;
+        width: 100%;
+        $args: (25px 40px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__text-content {
+        @include flex-column-align-centered();
+        max-width: 475px;
+        width: 100%;
+    }
+
+    &__title {
+        $args: (20px 40px mb,
+        );
+        @include fluid-ultra($args);
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .about-us {
+        padding: 0;
+
+        &__container {
+            @include flex-row-align-centered();
+            box-shadow: none;
+        }
+
+        &__img-container {
+            margin: 0 62px 0 11px;
+        }
+
+        &__text-content {
+            display: block;
+        }
+
+        &__title,
+        &__description {
+            text-align: start;
+        }
+    }
+}
+
+
+///bloks which first used in features
+.flex-block {
+    @include flex-column-align-centered;
+}
+
+
+@media screen and (min-width:$desktop) {
+    .flex-block {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 50px;
+    }
+}
+
+
+.flex-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 530px;
+    width: 100%;
+    min-height: 358px;
+    @include flex-column-align-centered;
+
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        @include flex-column-align-centered;
+        height: 100%;
+    }
+
+    &__title {
+        font-family: 'Helvetica';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: $black;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        max-width: 300px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: $gray;
+        margin-bottom: 15px;
+    }
+
+    &__learn-more {
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 0.005em;
+        color: $black;
+        display: block;
+        @include flex-row-align-centered;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $main-pink;
+        }
+    }
+
+    &__learn-more:hover &__arrow {
+        color: $main-pink;
+    }
+
+    &__arrow {
+        font-size: 18px;
+        color: $main-purple;
+        margin-left: 10px;
+        transition: color 0.3s;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .flex-item {
+        padding-top: 50px;
+        padding-bottom: 33px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+
+        &--first {
+            background-image: url(../img/background-1.png);
+        }
+
+        &--second {
+            background-image: url(../img/background-2.png);
+        }
+
+        &--third {
+            background-image: url(../img/background-3.png);
+        }
+
+        &--fourth {
+            background-image: url(../img/background-4.png);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        &__image {
+            margin-bottom: 0;
+        }
+
+        &__info {
+            align-items: flex-start;
+            margin-right: 50px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            max-width: 220px;
+            font-size: 16px;
+            text-align: start;
+            margin-bottom: 20px;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        &__learn-more {
+            font-size: 16px;
+        }
+
+        &__arrow {
+            font-size: 20px;
+        }
+    }
+}
+
+
+///FEATURES
+.features {
+    &__container {
+        $args: (80px 150px mb,
+        );
+        @include fluid-ultra($args);
+    }
+
+    &__title {
+        $args: (30px 50px mb,
+        );
+        @include fluid-ultra($args);
+        text-align: center;
+    }
+
+    &__description {
+        max-width: 584px;
+        text-align: center;
+        margin: 0 auto;
+        $args: (50px 100px mb,
+        );
+        @include fluid-ultra($args);
+    }
+}
+
+
+///bloks which first used in testimonials
+.testimonial-item {
+    background-color: $white;
+    box-shadow: 0px 20px 0px rgba(156, 105, 226, 0.3);
+    $args: (10px 20px border-radius,
+        30px 60px pt,
+        35px 70px pl,
+        35px 70px pr,
+        25px 50px pb,
+    );
+    @include fluid-ultra($args);
+    @include flex-column-align-centered;
+    align-items: flex-start;
+
+    &__photo {
+        @include wh(60px);
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        max-width: 385px;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    &__name {
+        font-family: 'Avenir';
+        font-weight: 900;
+        font-size: 16px;
+        letter-spacing: 0.005em;
+        color: $black;
+    }
+
+    &__link {
+        font-family: 'Avenir';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: $main-purple;
+        transition: text-decoration 0.3s;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__feedback {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.8;
+        color: $gray;
+    }
+}
+
+
+@media screen and (min-width:$tablet) {
+    .testimonial-item {
+        flex-direction: row;
+
+        &__photo {
+            @include wh(90px);
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+
+        &__info {
+            padding-top: 20px;
+        }
+
+        &__name {
+            font-size: 18px;
+        }
+
+        &__link {
+            font-size: 14px;
+            margin-bottom: 19px;
+        }
+
+        &__feedback {
+            font-size: 18px;
+        }
+    }
+}
+
+
+///TESTIMONIALS
+.testimonials {
+    $args: (10px 40px pl,
+        10px 40px pr,
+    );
+    @include fluid-ultra($args);
+
+    &__container {
+        $args: (80px 110px pt,
+            50px 133px pb,
+            40px 80px pr,
+            40px 80px pl,
+            80px 150px mb,
+            10px 50px border-radius);
+
+        @include fluid-ultra($args);
+        @include flex-column-align-centered;
+        background-color: $main-purple;
+    }
+
+    &__title {
+        color: $white;
+        $args: (30px 85px mb,
+        );
+        @include fluid-ultra($args);
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .testimonials {
+        padding: 0;
+
+        &__title {
+            align-self: start;
+        }
+    }
+}
+
+
+///list for footer
+
+.help-list {
+    margin-bottom: 20px;
+
+    &__title {
+        font-weight: 900;
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+
+    &__link {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 250%;
+        color: $black;
+        text-align: center;
+        transition: color 0.3s;
+    }
+
+    &__item:hover &__link {
+        color: $main-pink;
+    }
+}
+
+
+@media screen and (min-width:$desktop) {
+    .help-list {
+        margin-bottom: 0;
+
+        &__title {
+            text-align: start;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        &__link {
+            font-size: 16px;
+            color: $black;
+            text-align: start;
+        }
+    }
+}
+
+.smm {
+    &__list {
+        display: flex;
+        gap: 14px;
+    }
+
+    &__link {
+        @include wh(50px);
+        border-radius: 50px;
+        background-color: rgba($black, .1);
+        @include flex-row-align-centered(center);
+        transition: background-color 0.3s;
+    }
+
+    &__icon {
+        fill: $white;
+        @include wh(16px);
+        transition: fill 0.3s;
+
+
+        &--f {
+            width: 9.58px;
+            height: 20.49px;
+        }
+
+        &--twitter {
+            width: 18.27px;
+            height: 15.07px;
+        }
+    }
+
+    &__item:hover &__link {
+        background-color: rgba($main-pink, .3);
+    }
+
+    &__item:hover &__icon {
+        fill: $main-purple;
+    }
+}
+
+.all-rights {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 180%;
+    letter-spacing: 0.01em;
+    color: $black;
+    $args: (40px 100px pt,
+    );
+    @include fluid-ultra($args);
+    max-width: 300px;
+    text-align: center;
+}
+
+@media screen and (min-width:$desktop) {
+    .all-rights {
+        font-size: 12px;
+        max-width: 300px;
+        text-align: start;
+    }
+}
+
+///FOOTER
+.footer {
+
+    border-top: 2px solid rgba($main-purple, 0.2);
+
+    &__container {
+        $args: (50px 100px pt,
+            50px 100px mb,
+        );
+
+        @include fluid-ultra($args);
+    }
+
+    &__row,
+    &__title-container,
+    &__co-info,
+    &__text-container,
+    &__about-help,
+    &__smm,
+    &__buttons {
+        @include flex-column-align-centered;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        margin-bottom: 35px;
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__co-name {
+        font-family: 'Avenir';
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 160%;
+        color: $black;
+        margin-bottom: 40px;
+    }
+
+    &__adress {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        color: $black;
+        max-width: 250px;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    &__link {
+        font-family: 'Avenir';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: 0.01em;
+        color: $black;
+        transition: color 0.3s;
+        margin-bottom: 5px;
+
+        &:hover {
+            color: $main-pink;
+        }
+    }
+
+
+
+}
+
+@media screen and (min-width:1050px) {
+    .footer {
+
+        &__title-container,
+        &__co-info {
+            display: block;
+        }
+
+        &__row,
+        &__about-help,
+        &__buttons {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__text-container {
+            align-items: start;
+        }
+
+        &__about-help {
+            gap: 150px;
+            margin-right: 32px;
+        }
+
+        &__row {
+            justify-content: space-between;
+
+            &--first {
+                align-items: center;
+                margin-bottom: 150px;
+            }
+        }
+
+        &__buttons {
+            align-items: center;
+            gap: 30px;
+            width: 410px;
+        }
+
+        &__btn {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__info {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        &__logo {
+            display: inline-block;
+            margin-bottom: 67px;
+            margin-right: 20px;
+        }
+
+        &__co-name {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+
+        &__adress {
+            text-align: start;
+        }
+
+        &__link {
+            margin-bottom: 0;
+        }
+    }
+}
