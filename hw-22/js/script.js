@@ -50,12 +50,12 @@ function showShoppingList(array) {
 }
 
 function getBoughtList(array) {
-	return array.filter((product) => product.bought == true);
+	return array.filter((product) => product.bought);
 }
 
 //1.3
 function getNotPurchasedList(array) {
-	return array.filter((product) => product.bought == false);
+	return array.filter((product) => !!product.bought);
 }
 
 //1.2
