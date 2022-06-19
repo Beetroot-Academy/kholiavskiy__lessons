@@ -1,0 +1,1 @@
+@mixin flex-row-align-centered($justy: start) { display: flex; flex-direction: row; align-items: center; justify-content: $justy; } @mixin flex-column-align-centered($justy: start) { @include flex-row-align-centered($justy); flex-direction: column; } @mixin wh ($var) { width: $var; height: $var; }
