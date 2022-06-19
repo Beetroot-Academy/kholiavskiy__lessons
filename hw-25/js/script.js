@@ -34,8 +34,8 @@ document.addEventListener('keydown', (event) => {
 	}
 });
 
-document.addEventListener('keyup', () => {
-	pressedKeys.length = 0;
+document.addEventListener('keyup', (event) => {
+	pressedKeys = pressedKeys.filter((el) => el != event.code);
 });
 
 //task2
