@@ -1,0 +1,37 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.text-edit {
+	border: 1px solid indianred;
+}
+
+.task {
+	margin-bottom: 40px;
+}
+
+.flexible {
+	width: 250px;
+	height: 100px;
+	padding: 4px;
+	border: 1px solid salmon;
+	position: relative;
+
+	&__corner {
+		content: '';
+		position: absolute;
+		background-color: red;
+		width: 8px;
+		height: 8px;
+		right: 0;
+		bottom: 0;
+		cursor: se-resize;
+	}
+}
