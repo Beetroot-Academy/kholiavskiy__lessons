@@ -1,0 +1,116 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.splide__track {
+	height: calc(100vh - 60px);
+}
+
+@media screen and (min-width: $desktop) {
+	.splide__track {
+		height: calc(100vh - 80px);
+	}
+}
+
+.main-heading {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 32px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $brown-light;
+}
+
+@media screen and (min-width: $desktop) {
+	.main-heading {
+		font-size: 50px;
+		line-height: 61px;
+	}
+}
+
+.hero {
+	&__container {
+		padding-top: 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	&__title {
+		max-width: 210px;
+		margin-bottom: 21px;
+	}
+
+	&__btn {
+		margin-right: 29px;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.hero {
+		&__title {
+			margin-bottom: 20px;
+			margin-right: 68px;
+		}
+
+		&__btn {
+			margin-right: 96px;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.hero {
+		&__container {
+			padding-top: 120px;
+		}
+
+		&__title {
+			max-width: 400px;
+			margin-bottom: 50px;
+			margin-right: 0;
+		}
+
+		&__btn {
+			margin-right: 85px;
+		}
+	}
+}
+.hero {
+	.splide__pagination {
+		gap: 12px;
+		bottom: 20px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		.splide__pagination {
+			gap: 20px;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		.splide__pagination {
+			gap: 50px;
+			bottom: 50px;
+		}
+	}
+
+	.splide__pagination__page {
+		@include wh(12px);
+		background: $dot-inactive;
+		.is-active {
+			transform: scale(1);
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		.splide__pagination__page {
+			@include wh(20px);
+		}
+	}
+
+	.splide__pagination__page.is-active {
+		background: $tomato-light;
+		transform: none;
+	}
+}

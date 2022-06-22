@@ -11,7 +11,12 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
 		<script defer src="js/script.js"></script>
 	</head>
 	<body>
@@ -56,7 +61,33 @@
 		</header>
 		<main>
 			<section class="hero">
-				<div class="container hero__container"></div>
+				<div class="splide" id="hero-splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">discover new options</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero.png" alt="slide 1" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">expand your horizons</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero-2.png" alt="slide 2" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">Find your own style</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero-3.png" alt="slide 3" />
+							</li>
+						</ul>
+					</div>
+				</div>
 			</section>
 		</main>
 	</body>
