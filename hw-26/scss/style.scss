@@ -1,0 +1,27 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'header' as *;
+
+body {
+	font-family: 'Montserrat';
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+@media screen and (min-width: $tablet) {
+	.container {
+		padding: 0 14px;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.container {
+		padding: 0;
+	}
+}
