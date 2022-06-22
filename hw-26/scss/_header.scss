@@ -178,11 +178,59 @@
 	}
 }
 
+@media screen and (min-width: $tablet) {
+	.nav {
+		position: static;
+		width: auto;
+		max-width: unset;
+
+		&__list {
+			flex-direction: row;
+		}
+
+		&__link {
+			display: block;
+			padding: 20px 15px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+
+			&--active {
+				background: $tomato-light;
+				color: white;
+
+				&:hover {
+					color: white;
+					cursor: default;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.nav {
+		&__link {
+			padding: 28px 15px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+}
+
 .header {
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		min-height: 60px;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.header {
+		&__container {
+			min-height: 80px;
+		}
 	}
 }

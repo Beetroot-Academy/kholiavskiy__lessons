@@ -244,6 +244,38 @@ h6 {
   color: #f16a50;
 }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    position: static;
+    width: auto;
+    max-width: unset;
+  }
+  .nav__list {
+    flex-direction: row;
+  }
+  .nav__link {
+    display: block;
+    padding: 20px 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .nav__link--active {
+    background: #f16a50;
+    color: white;
+  }
+  .nav__link--active:hover {
+    color: white;
+    cursor: default;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__link {
+    padding: 28px 15px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -251,8 +283,13 @@ h6 {
   min-height: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__container {
+    min-height: 80px;
+  }
+}
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
