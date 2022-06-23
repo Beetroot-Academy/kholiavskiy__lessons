@@ -2,16 +2,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.splide__track {
-	height: calc(100vh - 60px);
-}
-
-@media screen and (min-width: $desktop) {
-	.splide__track {
-		height: calc(100vh - 80px);
-	}
-}
-
 .main-heading {
 	font-weight: 700;
 	font-size: 26px;
@@ -77,6 +67,15 @@
 	}
 }
 .hero {
+	.splide__track {
+		height: calc(100vh - 60px);
+	}
+
+	@media screen and (min-width: $desktop) {
+		.splide__track {
+			height: calc(100vh - 80px);
+		}
+	}
 	.splide__pagination {
 		gap: 12px;
 		bottom: 20px;
@@ -95,22 +94,22 @@
 		}
 	}
 
-	.splide__pagination__page {
-		@include wh(12px);
-		background: $dot-inactive;
-		.is-active {
-			transform: scale(1);
-		}
-	}
-
 	@media screen and (min-width: $desktop) {
 		.splide__pagination__page {
 			@include wh(20px);
 		}
 	}
+}
 
-	.splide__pagination__page.is-active {
-		background: $tomato-light;
-		transform: none;
+.splide__pagination__page.is-active {
+	background: $tomato-light;
+	transform: none;
+}
+
+.splide__pagination__page {
+	@include wh(12px);
+	background: $dot-inactive;
+	.is-active {
+		transform: scale(1);
 	}
 }

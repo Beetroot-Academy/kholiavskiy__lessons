@@ -4,6 +4,11 @@
 	align-items: center;
 	justify-content: $justy;
 }
+@mixin flex-center() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 @mixin flex-column-align-centered($justy: start) {
 	@include flex-row-align-centered($justy);
 	flex-direction: column;

@@ -40,8 +40,17 @@ body {
 	color: #ffffff;
 	background: transparent;
 	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--blk {
+		border-color: $black;
+		color: $black;
+	}
 
 	&:hover {
+		color: #ffffff;
 		background: $tomato-light;
 		border-color: $tomato-light;
 	}
@@ -54,5 +63,21 @@ body {
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 22px;
+	}
+}
+
+.section-heading {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $black;
+}
+
+@media screen and (min-width: $desktop) {
+	.section-heading {
+		font-size: 32px;
+		line-height: 39px;
 	}
 }

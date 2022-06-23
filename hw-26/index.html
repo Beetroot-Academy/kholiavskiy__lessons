@@ -61,7 +61,7 @@
 		</header>
 		<main>
 			<section class="hero">
-				<div class="splide" id="hero-splide">
+				<div class="splide" id="hero-splide" role="group">
 					<div class="splide__track">
 						<ul class="splide__list">
 							<li class="splide__slide">
@@ -87,6 +87,90 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+			</section>
+			<section class="new-arrivals">
+				<div class="container new-arrivals__container">
+					<h2 class="section-heading new-arrivals__title">new arrivals</h2>
+					<div class="splide" role="group" id="new-arrivals">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide shop-slide">
+									<span class="shop-slide__label">in stock</span>
+									<div class="shop-slide__img-wrapper">
+										<img src="./img/product-1.png" alt="product" />
+										<h3 class="shop-slide__title">
+											Hagstrom Alvar Limited Edition
+										</h3>
+										<span class="shop-slide__price">€2.990,00</span>
+									</div>
+								</li>
+								<li class="splide__slide shop-slide">
+									<span class="shop-slide__label">in stock</span>
+									<div class="shop-slide__img-wrapper">
+										<img src="./img/product-2.png" alt="product" />
+										<h3 class="shop-slide__title">
+											Hagstrom Tremar Viking Deluxe Cloudy Seas
+										</h3>
+										<span class="shop-slide__price">€1.300,00</span>
+									</div>
+								</li>
+								<li class="splide__slide shop-slide shop-slide--sold">
+									<span class="shop-slide__label">sold</span>
+									<div class="shop-slide__img-wrapper">
+										<img src="./img/product-3.png" alt="product" />
+										<h3 class="shop-slide__title">
+											Gibson Les Paul Standard 60s
+										</h3>
+										<span class="shop-slide__price">€3.749,00</span>
+									</div>
+								</li>
+								<li class="splide__slide shop-slide">
+									<span class="shop-slide__label">in stock</span>
+									<div class="shop-slide__img-wrapper">
+										<img src="./img/product-4.png" alt="product" />
+										<h3 class="shop-slide__title">
+											Suhr Standard Plus Trans Blue Denim
+										</h3>
+										<span class="shop-slide__price">€3.449,00</span>
+									</div>
+								</li>
+								<li class="splide__slide shop-slide">
+									<span class="shop-slide__label">in stock</span>
+									<div class="shop-slide__img-wrapper">
+										<img src="./img/product-5.png" alt="product" />
+										<h3 class="shop-slide__title">
+											Fender Telecaster Black Paisley Limited Edition
+										</h3>
+										<span class="shop-slide__price">€1.449,00</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="splide__arrows splide__arrows--ltr">
+							<button
+								class="splide__arrow splide__arrow--prev"
+								type="button"
+								aria-label="Previous slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#prev"></use>
+								</svg>
+							</button>
+							<button
+								class="splide__arrow splide__arrow--next"
+								type="button"
+								aria-label="Next slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#next"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button class="btn btn--blk new-arrivals__btn">View more</button>
 				</div>
 			</section>
 		</main>

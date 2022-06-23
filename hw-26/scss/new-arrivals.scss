@@ -1,0 +1,194 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.new-arrivals {
+	&__container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__btn {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.new-arrivals {
+		&__container {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+
+		&__title {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.shop-slide {
+	width: 301px;
+	height: 491px;
+	position: relative;
+	border: 1px solid $brown-light;
+
+	&--sold {
+		border-color: $tomato-light;
+	}
+
+	&--sold &__label {
+		background: $brown-light;
+		color: $black;
+	}
+
+	&__label {
+		@include flex-center();
+		width: 60px;
+		height: 20px;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $brown-light;
+		background: $tomato-light;
+	}
+
+	&__img-wrapper {
+		width: 200px;
+		height: 370px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		max-width: 279px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		color: $black;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		color: $black;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.shop-slide {
+		width: 224px;
+		height: 437px;
+
+		&__img-wrapper {
+			width: 204px;
+			height: 300px;
+		}
+
+		&__title {
+			max-width: 204px;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.new-arrivals {
+	.splide {
+		max-width: 301px;
+		margin: 0 auto;
+		margin-bottom: 72px;
+
+		&__pagination {
+			position: absolute;
+			bottom: -39px;
+			gap: 12px;
+		}
+
+		&__pagination__page {
+			background: $dark-dot-inactive;
+		}
+		&__pagination__page.is-active {
+			background: $tomato-light;
+		}
+	}
+
+	@media screen and (min-width: $tablet) {
+		.splide {
+			max-width: 704px;
+			margin-bottom: 40px;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		.splide {
+			max-width: 1200px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.splide__arrow--prev svg {
+	transform: none;
+}
+
+.splide__arrow {
+	background: transparent;
+	width: auto;
+	height: auto;
+	opacity: 1;
+
+	&:hover svg {
+		fill: $tomato-light;
+		opacity: 1;
+		transition: fill 0.3s;
+	}
+
+	svg {
+		fill: $arrow-inactive;
+		width: 16px;
+		height: 30px;
+	}
+}
+
+.splide__arrow--prev {
+	left: -25px;
+}
+.splide__arrow--next {
+	right: -25px;
+}
+
+@media screen and (min-width: $desktop) {
+	.splide__arrow {
+		svg {
+			width: 40px;
+			height: 74px;
+		}
+	}
+
+	.splide__arrow--prev {
+		left: -55px;
+	}
+	.splide__arrow--next {
+		right: -55px;
+	}
+}
