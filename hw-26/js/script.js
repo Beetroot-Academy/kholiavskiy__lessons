@@ -9,6 +9,7 @@ burger.addEventListener('click', (event) => {
 new Splide('#hero-splide', {
 	type: 'loop',
 	perPage: 1,
+	perMove: 1,
 	autoplay: true,
 	interval: 2500,
 	cover: true,
@@ -20,7 +21,7 @@ new Splide('#new-arrivals', {
 	perPage: 5,
 	perMove: 1,
 	autoplay: true,
-	interval: 2500,
+	interval: 5000,
 	gap: '20px',
 	pagination: false,
 	breakpoints: {
@@ -32,6 +33,28 @@ new Splide('#new-arrivals', {
 		1200: {
 			perPage: 3,
 			gap: '15px',
+		},
+	},
+}).mount();
+
+new Splide('#partnes-splide', {
+	type: 'loop',
+	perPage: 9,
+	perMove: 1,
+	autoplay: true,
+	interval: 3000,
+	gap: '20px',
+	pagination: false,
+	breakpoints: {
+		768: {
+			perPage: 2,
+			gap: '20px',
+			arrows: false,
+			pagination: true,
+		},
+		1200: {
+			perPage: 6,
+			gap: '10px',
 		},
 	},
 }).mount();

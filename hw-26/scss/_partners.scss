@@ -1,0 +1,89 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.partners {
+	&__container {
+		padding-top: 50px;
+		padding-bottom: 82px;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	.splide {
+		max-width: 300px;
+		margin: 0 auto;
+
+		&__slide {
+			width: 100px;
+			@include flex-center;
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__pagination {
+			position: absolute;
+			bottom: -39px;
+			gap: 12px;
+		}
+
+		&__pagination__page {
+			background: $dark-dot-inactive;
+		}
+
+		&__pagination__page.is-active {
+			background: $tomato-light;
+		}
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.partners {
+		&__container {
+			padding-bottom: 50px;
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+
+		.splide {
+			max-width: 740px;
+
+			&__slide {
+				width: 114px;
+			}
+
+			&__arrow--prev {
+				left: -8px;
+			}
+			&__arrow--next {
+				right: -8px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.partners {
+		&__container {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+
+		.splide {
+			max-width: 1186px;
+
+			&__arrow--prev {
+				left: -60px;
+			}
+			&__arrow--next {
+				right: -60px;
+			}
+		}
+	}
+}
