@@ -14,6 +14,7 @@ new Splide('#hero-splide', {
 	interval: 2500,
 	cover: true,
 	arrows: false,
+	rewind: true,
 }).mount();
 
 new Splide('#new-arrivals', {
@@ -24,13 +25,14 @@ new Splide('#new-arrivals', {
 	interval: 5000,
 	gap: '20px',
 	pagination: false,
+	rewind: true,
 	breakpoints: {
 		768: {
 			perPage: 1,
 			arrows: false,
 			pagination: true,
 		},
-		1200: {
+		1320: {
 			perPage: 3,
 			gap: '15px',
 		},
@@ -45,6 +47,7 @@ new Splide('#partnes-splide', {
 	interval: 3000,
 	gap: '20px',
 	pagination: false,
+	rewind: true,
 	breakpoints: {
 		768: {
 			perPage: 2,
@@ -52,7 +55,7 @@ new Splide('#partnes-splide', {
 			arrows: false,
 			pagination: true,
 		},
-		1200: {
+		1320: {
 			perPage: 6,
 			gap: '10px',
 		},

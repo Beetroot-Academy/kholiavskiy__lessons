@@ -33,6 +33,7 @@
 
 	&__menu {
 		margin-left: 38px;
+		margin-right: 5px;
 	}
 
 	&__profile {
@@ -85,7 +86,7 @@
 	right: 0;
 	left: 0;
 	transition: all 0.3s ease-in-out;
-	background-color: rgba($tomato-light, 0.4);
+	background-color: rgba($tomato-light, 0.15);
 	visibility: hidden;
 	opacity: 0;
 }
@@ -221,13 +222,26 @@
 
 .header {
 	&__container {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		min-height: 60px;
+		background: white;
 	}
 }
 
+@media screen and (min-width: $tablet) {
+	.header {
+		&__container {
+			position: static;
+		}
+	}
+}
 @media screen and (min-width: $desktop) {
 	.header {
 		&__container {
