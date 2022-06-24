@@ -34,8 +34,9 @@
 	height: 491px;
 	position: relative;
 	border: 1px solid $brown-light;
+	transition: border-color 0.2s;
 
-	&--sold {
+	&:hover {
 		border-color: $tomato-light;
 	}
 

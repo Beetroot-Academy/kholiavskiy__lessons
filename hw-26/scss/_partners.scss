@@ -2,6 +2,7 @@
 @use 'mixins' as *;
 
 .partners {
+	background: $brown-light;
 	&__container {
 		padding-top: 50px;
 		padding-bottom: 82px;

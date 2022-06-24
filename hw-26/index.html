@@ -11,6 +11,10 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script
+			src="https://kit.fontawesome.com/4f6c80e6c3.js"
+			crossorigin="anonymous"
+		></script>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
@@ -96,54 +100,64 @@
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide shop-slide">
-									<span class="shop-slide__label">in stock</span>
-									<div class="shop-slide__img-wrapper">
-										<img src="./img/product-1.png" alt="product" />
-										<h3 class="shop-slide__title">
-											Hagstrom Alvar Limited Edition
-										</h3>
-										<span class="shop-slide__price">€2.990,00</span>
-									</div>
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-1.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Hagstrom Alvar Limited Edition
+											</h3>
+											<span class="shop-slide__price">€2.990,00</span>
+										</div>
+									</a>
 								</li>
 								<li class="splide__slide shop-slide">
-									<span class="shop-slide__label">in stock</span>
-									<div class="shop-slide__img-wrapper">
-										<img src="./img/product-2.png" alt="product" />
-										<h3 class="shop-slide__title">
-											Hagstrom Tremar Viking Deluxe Cloudy Seas
-										</h3>
-										<span class="shop-slide__price">€1.300,00</span>
-									</div>
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-2.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Hagstrom Tremar Viking Deluxe Cloudy Seas
+											</h3>
+											<span class="shop-slide__price">€1.300,00</span>
+										</div>
+									</a>
 								</li>
 								<li class="splide__slide shop-slide shop-slide--sold">
-									<span class="shop-slide__label">sold</span>
-									<div class="shop-slide__img-wrapper">
-										<img src="./img/product-3.png" alt="product" />
-										<h3 class="shop-slide__title">
-											Gibson Les Paul Standard 60s
-										</h3>
-										<span class="shop-slide__price">€3.749,00</span>
-									</div>
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">sold</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-3.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Gibson Les Paul Standard 60s
+											</h3>
+											<span class="shop-slide__price">€3.749,00</span>
+										</div>
+									</a>
 								</li>
 								<li class="splide__slide shop-slide">
-									<span class="shop-slide__label">in stock</span>
-									<div class="shop-slide__img-wrapper">
-										<img src="./img/product-4.png" alt="product" />
-										<h3 class="shop-slide__title">
-											Suhr Standard Plus Trans Blue Denim
-										</h3>
-										<span class="shop-slide__price">€3.449,00</span>
-									</div>
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-4.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Suhr Standard Plus Trans Blue Denim
+											</h3>
+											<span class="shop-slide__price">€3.449,00</span>
+										</div>
+									</a>
 								</li>
 								<li class="splide__slide shop-slide">
-									<span class="shop-slide__label">in stock</span>
-									<div class="shop-slide__img-wrapper">
-										<img src="./img/product-5.png" alt="product" />
-										<h3 class="shop-slide__title">
-											Fender Telecaster Black Paisley Limited Edition
-										</h3>
-										<span class="shop-slide__price">€1.449,00</span>
-									</div>
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-5.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Fender Telecaster Black Paisley Limited Edition
+											</h3>
+											<span class="shop-slide__price">€1.449,00</span>
+										</div>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -234,20 +248,66 @@
 				</div>
 			</section>
 		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<a class="footer__logo-link" href="#">
+					<svg class="logo footer__logo">
+						<use xlink:href="./img/sprite.svg#logo"></use>
+					</svg>
+				</a>
+				<div class="footer__content">
+					<div class="footer__nav-wrapper">
+						<a class="footer__logo-link--desktop" href="#">
+							<svg class="logo footer__logo">
+								<use xlink:href="./img/sprite.svg#logo"></use>
+							</svg>
+						</a>
+
+						<nav class="footer__nav nav-footer">
+							<ul class="nav-footer__list">
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Home</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Catalog</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">News</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="contacts footer__contacts">
+						<h4 class="contacts__title">Contact Us</h4>
+						<ul class="smm contacts__smm">
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-instagram"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-facebook-f"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-pinterest-p"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-twitter"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-youtube"> </a>
+							</li>
+						</ul>
+						<a class="contacts__tel" href="tel:+08003004040">0800 300 4040</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright-block">
+				<span class="footer__copyright"
+					>© Copyright 2022. All rights reserved.</span
+				>
+			</div>
+		</footer>
 	</body>
 </html>
-<!-- <svg class="icon">
-	<use xlink:href="./img/sprite.svg#logo"></use>
-</svg>
-<svg class="icon">
-	<use xlink:href="./img/sprite.svg#next"></use>
-</svg>
-<svg class="icon">
-	<use xlink:href="./img/sprite.svg#prev"></use>
-</svg>
-<svg class="icon">
-	<use xlink:href="./img/sprite.svg#profile"></use>
-</svg>
-<svg class="icon">
-	<use xlink:href="./img/sprite.svg#search"></use>
-</svg> -->
