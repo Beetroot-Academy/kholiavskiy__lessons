@@ -37,7 +37,6 @@ let heroSplide = new Splide('#hero-splide', {
 	arrows: false,
 	paginationDirection: 'ttb',
 	direction: 'ttb',
-	wheel: true,
 });
 
 heroSplide.on('active', (Slide) => {

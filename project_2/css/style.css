@@ -99,6 +99,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 122%;
+  scroll-behavior: smooth;
 }
 
 .smm {
@@ -138,6 +139,46 @@ h6 {
   .logo__item {
     width: 241px;
     height: 54px;
+  }
+}
+.section-title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: #2c4058;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 44px;
+  }
+}
+.main-button {
+  max-width: 171px;
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 13px;
+  color: #000000;
+  border: 1px solid #2c4058;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.main-button:hover {
+  color: #fff;
+  background-color: #55b7ff;
+  border-color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-button {
+    max-width: 190px;
+    width: 100%;
+    min-height: 50px;
   }
 }
 .burger {
@@ -346,30 +387,147 @@ h6 {
   }
 }
 
-.hero .splide__pagination {
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 80px;
+  }
+  .hero__subtitle {
+    font-size: 18px;
+  }
+}
+.splide__pagination {
   gap: 20px;
 }
-.hero .splide__pagination__page {
+.splide__pagination__page {
   width: 8px;
   height: 8px;
   border-radius: 50px;
   border: 1px solid #fff;
   background: transparent;
-  transform: scale(1);
   opacity: 1;
 }
-.hero .splide__pagination__page.is-active {
+.splide__pagination__page.is-active {
   background: #fff;
 }
 
 @media screen and (min-width: 1200px) {
-  .hero .splide__pagination {
+  .splide__pagination {
     right: 52px;
     gap: 40px;
   }
-  .hero .splide__pagination__page {
+  .splide__pagination__page {
     width: 10px;
     height: 10px;
+  }
+}
+.projects__container {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+.projects__title {
+  margin-bottom: 80px;
+}
+.projects__item {
+  margin-bottom: 90px;
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__container {
+    padding-top: 130px;
+    align-items: stretch;
+  }
+  .projects__title {
+    margin-bottom: 146px;
+  }
+  .projects__item {
+    margin-bottom: 140px;
+  }
+}
+.project__photo {
+  max-width: 630px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+.project__photo img {
+  object-fit: contain;
+  width: 100%;
+}
+.project__photo-shadow {
+  display: none;
+}
+.project__content {
+  max-width: 470px;
+}
+.project__subtitle {
+  font-size: 22px;
+  color: #2c4058;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+.project__title {
+  text-align: start;
+  margin-bottom: 19px;
+}
+.project__description {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 30px;
+  color: #2c4058;
+  margin-bottom: 41px;
+}
+.project__details {
+  margin-bottom: 50px;
+}
+.project__location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+.project__location::before {
+  display: block;
+  content: url("../img/map-point.svg");
+  margin-right: 10px;
+  width: 9px;
+  height: 17px;
+}
+
+@media screen and (min-width: 1200px) {
+  .project {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .project__photo {
+    display: block;
+    margin-bottom: 0;
+  }
+  .project__photo-shadow {
+    top: -57px;
+    left: -215px;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    max-width: 585px;
+    width: 100%;
+    height: 470px;
+    background-color: #55b7ff;
+  }
+  .project__photo-shadow--purple {
+    left: 800px;
+    background-color: #7e5aff;
+  }
+  .project--reverse {
+    flex-direction: row-reverse;
   }
 }
 

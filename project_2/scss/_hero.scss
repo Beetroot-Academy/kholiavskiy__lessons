@@ -1,4 +1,3 @@
-@use 'nullstyle' as *;
 @use 'variables' as *;
 @use 'mixins' as *;
 
@@ -72,37 +71,38 @@
 
 @media screen and (min-width: $desktop) {
 	.hero {
+		&__title {
+			font-size: 80px;
+		}
+		&__subtitle {
+			font-size: 18px;
+		}
 	}
 }
 
-.hero {
-	.splide__pagination {
-		gap: 20px;
+.splide__pagination {
+	gap: 20px;
 
-		&__page {
-			@include wh(8px);
-			border-radius: 50px;
-			border: 1px solid $color-white;
-			background: transparent;
-			transform: scale(1);
-			opacity: 1;
+	&__page {
+		@include wh(8px);
+		border-radius: 50px;
+		border: 1px solid $color-white;
+		background: transparent;
+		opacity: 1;
 
-			&.is-active {
-				background: $color-white;
-			}
+		&.is-active {
+			background: $color-white;
 		}
 	}
 }
 
 @media screen and (min-width: $desktop) {
-	.hero {
-		.splide__pagination {
-			right: 52px;
-			gap: 40px;
+	.splide__pagination {
+		right: 52px;
+		gap: 40px;
 
-			&__page {
-				@include wh(10px);
-			}
+		&__page {
+			@include wh(10px);
 		}
 	}
 }
