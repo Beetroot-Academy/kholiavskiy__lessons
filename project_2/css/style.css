@@ -412,7 +412,6 @@ h6 {
 
 @media screen and (min-width: 1200px) {
   .splide__pagination {
-    right: 52px;
     gap: 40px;
   }
   .splide__pagination__page {
@@ -420,6 +419,10 @@ h6 {
     height: 10px;
   }
 }
+.hero .splide__pagination {
+  right: 52px;
+}
+
 .projects__container {
   padding-top: 80px;
   display: flex;
@@ -529,6 +532,111 @@ h6 {
   .project--reverse {
     flex-direction: row-reverse;
   }
+}
+.news {
+  background-image: url(../img/news-back.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+}
+.news__container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.news__container::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+}
+.news__title {
+  margin-bottom: 50px;
+  color: #fff;
+}
+.news__splide {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .news__container {
+    padding-top: 150px;
+    padding-bottom: 170px;
+  }
+  .news__title {
+    margin-bottom: 90px;
+  }
+}
+.article {
+  display: block;
+  background: #fff;
+  max-width: 370px;
+  min-height: 514px;
+  padding-bottom: 30px;
+}
+.article__image {
+  max-width: 370px;
+  width: 100%;
+  min-height: 240px;
+  margin-bottom: 30px;
+}
+.article__image img {
+  object-fit: cover;
+  width: 100%;
+}
+.article__content {
+  padding: 0 20px;
+}
+.article__title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #2c4058;
+  margin-bottom: 15px;
+}
+.article__description {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 1.39;
+  color: #2c4058;
+  margin-bottom: 39px;
+}
+
+.user {
+  display: flex;
+  gap: 20px;
+}
+.user__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.user__image img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+}
+.user__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.user__name {
+  font-size: 18px;
+  color: #2c4058;
+}
+.user__date {
+  font-size: 14px;
+  color: #55b7ff;
+}
+
+.news .splide__pagination {
+  bottom: -60px;
 }
 
 /*# sourceMappingURL=style.css.map */

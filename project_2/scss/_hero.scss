@@ -98,11 +98,14 @@
 
 @media screen and (min-width: $desktop) {
 	.splide__pagination {
-		right: 52px;
 		gap: 40px;
 
 		&__page {
 			@include wh(10px);
 		}
 	}
+}
+
+.hero .splide__pagination {
+	right: 52px;
 }
