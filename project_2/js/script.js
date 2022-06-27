@@ -1,8 +1,25 @@
 const headerMenu = document.querySelector('.header__menu');
 const burger = document.querySelector('.burger');
+
 AOS.init();
 
 burger.addEventListener('click', openMobileMenu);
+
+const heroTitles = document.querySelectorAll('.hero__title');
+const heroSubtitles = document.querySelectorAll('.hero__subtitle');
+
+document.addEventListener('DOMContentLoaded', () => {
+	removeAOSClassesExceptZeroIndex(heroTitles);
+	removeAOSClassesExceptZeroIndex(heroSubtitles);
+});
+
+function removeAOSClassesExceptZeroIndex(array) {
+	array.forEach((element, index) => {
+		if (index != 0) {
+			element.classList.remove('aos-init', 'aos-animate');
+		}
+	});
+}
 
 function openMobileMenu() {
 	headerMenu.classList.toggle('mobile');
