@@ -1,0 +1,108 @@
+@use 'nullstyle' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+	position: relative;
+
+	&__container {
+		height: 100vh;
+		@include flex-center;
+		flex-direction: column;
+
+		&::before {
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: -1;
+			position: absolute;
+			content: ' ';
+			width: 100%;
+			height: 100vh;
+			background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 38px;
+		letter-spacing: 0.1em;
+		color: $color-white;
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: 0.3em;
+		color: $color-white;
+	}
+
+	&__next-page {
+		position: absolute;
+		bottom: 6.25%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		@include wh(40px);
+		@include flex-center;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 50px;
+		background: transparent;
+		cursor: pointer;
+		z-index: 1;
+		color: $color-white;
+		animation: pulse 3.5s ease-out;
+		animation-iteration-count: infinite;
+		@keyframes pulse {
+			0% {
+				opacity: 0.5;
+			}
+			50% {
+				opacity: 1;
+				bottom: 10%;
+			}
+			100% {
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.hero {
+	}
+}
+
+.hero {
+	.splide__pagination {
+		gap: 20px;
+
+		&__page {
+			@include wh(8px);
+			border-radius: 50px;
+			border: 1px solid $color-white;
+			background: transparent;
+			transform: scale(1);
+			opacity: 1;
+
+			&.is-active {
+				background: $color-white;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.hero {
+		.splide__pagination {
+			right: 52px;
+			gap: 40px;
+
+			&__page {
+				@include wh(10px);
+			}
+		}
+	}
+}

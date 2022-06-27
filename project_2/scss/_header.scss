@@ -96,6 +96,10 @@
 			flex-direction: row;
 			gap: 70px;
 		}
+
+		&__link {
+			width: unset;
+		}
 	}
 }
 
@@ -104,9 +108,11 @@
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: 1;
 
 	&__container {
 		padding-top: 20px;
+		padding-bottom: 20px;
 		@include flex-row-align-centered(space-between);
 	}
 

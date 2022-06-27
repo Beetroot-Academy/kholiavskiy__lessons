@@ -19,7 +19,17 @@
 			src="https://kit.fontawesome.com/4f6c80e6c3.js"
 			crossorigin="anonymous"
 		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+		></script>
 		<script defer src="js/script.js"></script>
 	</head>
 	<body>
@@ -64,7 +74,76 @@
 				</div>
 			</div>
 		</header>
-		<main></main>
+		<main>
+			<section class="hero">
+				<div class="splide" role="group" id="hero-splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos="zoom-out"
+										data-aos-once="false"
+										class="hero__title"
+									>
+										SIMPLE & MODERN
+									</h2>
+									<span
+										data-aos="fade-up"
+										data-aos-once="false"
+										class="hero__subtitle"
+									>
+										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos="zoom-out"
+										data-aos-once="false"
+										class="hero__title"
+									>
+										SIMPLE & MODERN
+									</h2>
+									<span
+										data-aos="fade-up"
+										data-aos-once="false"
+										class="hero__subtitle"
+									>
+										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos="zoom-out"
+										data-aos-once="false"
+										class="hero__title"
+									>
+										SIMPLE & MODERN
+									</h2>
+									<span
+										data-aos="fade-up"
+										data-aos-once="false"
+										class="hero__subtitle"
+									>
+										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#projects" class="material-symbols-outlined hero__next-page">
+					expand_more
+				</a>
+			</section>
+		</main>
 	</body>
 </html>
 <!-- <span class="material-symbols-outlined"> expand_more </span> -->

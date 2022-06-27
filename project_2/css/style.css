@@ -97,7 +97,8 @@ h6 {
 
 * {
   font-family: "Montserrat", sans-serif;
-  background-color: #55b7ff;
+  font-weight: 400;
+  line-height: 122%;
 }
 
 .smm {
@@ -115,6 +116,7 @@ h6 {
   background: transparent;
   color: #fff;
   transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
 }
 .smm__link:hover {
   background-color: #fff;
@@ -216,15 +218,20 @@ h6 {
     flex-direction: row;
     gap: 70px;
   }
+  .nav__link {
+    width: unset;
+  }
 }
 .header {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 .header__container {
   padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -269,6 +276,100 @@ h6 {
   .header__nav {
     margin-bottom: 0;
     margin-right: 110px;
+  }
+}
+.hero {
+  position: relative;
+}
+.hero__container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__container::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+}
+.hero__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero__subtitle {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: #fff;
+}
+.hero__next-page {
+  position: absolute;
+  bottom: 6.25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  color: #fff;
+  animation: pulse 3.5s ease-out;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.hero .splide__pagination {
+  gap: 20px;
+}
+.hero .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: transparent;
+  transform: scale(1);
+  opacity: 1;
+}
+.hero .splide__pagination__page.is-active {
+  background: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .splide__pagination {
+    right: 52px;
+    gap: 40px;
+  }
+  .hero .splide__pagination__page {
+    width: 10px;
+    height: 10px;
   }
 }
 
