@@ -639,4 +639,28 @@ h6 {
   bottom: -60px;
 }
 
+.splide__arrows .splide__arrow {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  transition: transform 0.3s;
+}
+.splide__arrows .splide__arrow:hover {
+  opacity: 0.7;
+}
+.splide__arrows .splide__arrow--next {
+  right: -100px;
+}
+.splide__arrows .splide__arrow--prev {
+  left: -100px;
+}
+.splide__arrows .material-symbols-outlined {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

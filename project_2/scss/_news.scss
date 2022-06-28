@@ -123,3 +123,32 @@
 .news .splide__pagination {
 	bottom: -60px;
 }
+
+.splide__arrows {
+	.splide__arrow {
+		@include wh(40px);
+		background: transparent;
+		border: 1px solid rgba($color-white, 0.5);
+		opacity: 1;
+		transition: transform 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&--next {
+			right: -100px;
+		}
+
+		&--prev {
+			left: -100px;
+		}
+	}
+
+	.material-symbols-outlined {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1;
+		color: $color-white;
+	}
+}

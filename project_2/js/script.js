@@ -57,12 +57,15 @@ heroSplide.mount();
 
 let newsSplide = new Splide('#news-splide', {
 	type: 'loop',
-	// autoplay: true,
+	autoplay: true,
 	interval: 4000,
 	perPage: 3,
 	perMove: 1,
 	gap: '30px',
 	breakpoints: {
+		1375: {
+			arrows: false,
+		},
 		1200: {
 			perPage: 2,
 			width: '770px',
@@ -72,24 +75,6 @@ let newsSplide = new Splide('#news-splide', {
 			width: '370px',
 		},
 	},
-});
-
-newsSplide.on('mounted', function () {
-	// This will be executed.
-	const newsSlides = document.querySelectorAll('.article');
-	newsSlides.forEach((el) => {
-		el.classList.remove('aos-init', 'aos-animate');
-	});
-});
-
-newsSplide.on('visible', (Slide) => {
-	const article = Slide.slide.querySelector('.article');
-	article.classList.add('aos-init', 'aos-animate');
-});
-
-newsSplide.on('hidden', (Slide) => {
-	const article = Slide.slide.querySelector('.article');
-	article.classList.remove('aos-init', 'aos-animate');
 });
 
 newsSplide.mount();
