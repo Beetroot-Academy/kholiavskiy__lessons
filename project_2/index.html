@@ -27,7 +27,8 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-		<script defer src="js/script.js"></script>
+		<script defer src="./js/script.js"></script>
+		<script defer src="js/fslightbox.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -395,6 +396,61 @@
 							</button>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="gallery">
+				<div class="container gallery__container">
+					<h2 class="section-title gallery__title">gallery</h2>
+					<div class="photos gallery__photos">
+						<a
+							data-aos="fade-down-right"
+							data-aos-delay="100"
+							data-fslightbox
+							href="./img/gallary-1.png"
+							class="photos__item photos__item--big"
+						>
+							<img src="./img/gallary-1.png" alt="photo" />
+						</a>
+						<div class="photos__grid-block">
+							<a
+								data-aos="fade-down-left"
+								data-aos-delay="250"
+								data-fslightbox
+								href="./img/gallery-2.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-2.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-down-left"
+								data-aos-delay="300"
+								data-fslightbox
+								href="./img/gallery-3.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-3.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-up-left"
+								data-aos-delay="200"
+								data-fslightbox
+								href="./img/gallery-4.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-4.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-up-left"
+								data-aos-delay="350"
+								data-fslightbox
+								href="./img/gallery-5.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-5.png" alt="photo" />
+							</a>
+						</div>
+					</div>
+					<button class="main-button gallery__btn">see more</button>
 				</div>
 			</section>
 		</main>
