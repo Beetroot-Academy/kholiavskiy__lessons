@@ -1,13 +1,16 @@
 const headerMenu = document.querySelector('.header__menu');
 const burger = document.querySelector('.burger');
+const header = document.querySelector('.header');
+let isTop = true;
 
 AOS.init();
 
 burger.addEventListener('click', openMobileMenu);
 
-function openMobileMenu() {
+function openMobileMenu(e) {
 	headerMenu.classList.toggle('mobile');
 	burger.classList.toggle('active');
+	if (isTop) header.classList.toggle('has-background');
 }
 
 //remove AOS classes for hero's elements
@@ -124,14 +127,18 @@ function initMap(newLat, newLng) {
 window.initMap = initMap(46.48811798529199, 30.74121463237711);
 
 //adding background for header
-const header = document.querySelector('.header');
+
 const className = 'has-background';
 const scrollTrigger = 60;
 
 window.addEventListener('scroll', function (e) {
-	window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger
-		? header.classList.add(className)
-		: header.classList.remove(className);
+	if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+		header.classList.add(className);
+		isTop = false;
+	} else {
+		isTop = true;
+		header.classList.remove(className);
+	}
 });
 
 //adding active class for nav list
