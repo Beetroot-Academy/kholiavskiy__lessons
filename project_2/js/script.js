@@ -78,3 +78,25 @@ let newsSplide = new Splide('#news-splide', {
 });
 
 newsSplide.mount();
+
+const displayMap = document.getElementById('map');
+
+function initMap(newLat, newLng) {
+	const uluru = { lat: newLat, lng: newLng };
+
+	const map = new google.maps.Map(displayMap, {
+		zoom: 16,
+		center: uluru,
+		disableDefaultUI: true,
+	});
+
+	const image = 'https://i.ibb.co/Lh8d7SH/location.png';
+
+	const marker = new google.maps.Marker({
+		position: uluru,
+		map: map,
+		icon: image,
+	});
+}
+
+window.initMap = initMap(46.48811798529199, 30.74121463237711);

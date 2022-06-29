@@ -27,6 +27,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+
 		<script defer src="./js/script.js"></script>
 		<script defer src="js/fslightbox.js"></script>
 	</head>
@@ -84,7 +85,7 @@
 										data-aos-once="true"
 										class="hero__title"
 									>
-										SIMPLE & MODERN
+										modern & simple
 									</h2>
 									<span
 										data-aos="fade-up"
@@ -103,14 +104,14 @@
 										data-aos="zoom-out"
 										class="hero__title"
 									>
-										SIMPLE & MODERN
+										EVEN MORE BUILDINGS
 									</h2>
 									<span
 										data-aos-once="true"
 										data-aos="fade-up"
 										class="hero__subtitle"
 									>
-										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+										TAKE A LOOK AT OUR GALLERY OF BUILDINGS
 									</span>
 								</div>
 								<img src="./img/hero-back.png" alt="background" />
@@ -122,14 +123,14 @@
 										data-aos="zoom-out"
 										class="hero__title"
 									>
-										SIMPLE & MODERN
+										BUILDINGS & TOWERS
 									</h2>
 									<span
 										data-aos-once="true"
 										data-aos="fade-up"
 										class="hero__subtitle"
 									>
-										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+										WE HAVE BUILDINGS IN THE PROJECTS
 									</span>
 								</div>
 								<img src="./img/hero-back.png" alt="background" />
@@ -453,6 +454,68 @@
 					<button class="main-button gallery__btn">see more</button>
 				</div>
 			</section>
+			<section class="contacts-section">
+				<div class="contacts-section__map" id="map"></div>
+				<div class="form-wrapper contacts-section__form-wrapper">
+					<h2 class="section-title form-wrapper__title">GET IN TOUCH</h2>
+					<div class="form-wrapper__content">
+						<div class="form-wrapper__contacts contacts">
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<a class="contacts__props" href="#">
+										<span class="fas fa-map-marker-alt contacts__icon"></span>
+										91 Nolan Extensions Suite 670
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a class="contacts__props" href="tel:+0013568682454">
+										<span class="fas fa-phone-alt contacts__icon"></span>
+										+001 356-868-2454
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a
+										class="contacts__props"
+										href="mailto:montichello@service.com"
+									>
+										<span class="fas fa-inbox contacts__icon"></span>
+										montichello@service.com
+									</a>
+								</li>
+								<li class="contacts__item">
+									<span class="contacts__props">
+										<span class="far fa-clock contacts__icon"></span>
+										From 07:05AM to 19:30PM
+									</span>
+								</li>
+							</ul>
+						</div>
+						<form class="form-wrapper__form form">
+							<input
+								class="form__input"
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Name"
+								required
+							/>
+							<input
+								type="email"
+								name="maile"
+								id="mail"
+								class="form__input"
+								placeholder="Email"
+								required
+							/>
+							<button class="main-button form__btn" type="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
 		</main>
+		<footer class="footer"></footer>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVA1qnUDoxVqoT6foVbBmE-uHKQ64P3Bk"></script>
 	</body>
 </html>
