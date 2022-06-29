@@ -2,6 +2,8 @@
 @use 'mixins' as *;
 
 .gallery {
+	overflow: hidden;
+
 	&__container {
 		padding-top: 100px;
 		padding-bottom: 80px;

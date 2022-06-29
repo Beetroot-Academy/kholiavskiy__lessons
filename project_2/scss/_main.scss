@@ -63,11 +63,28 @@
 	text-align: center;
 	color: $color-pale-black;
 	text-transform: uppercase;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -25px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 1px;
+		background: $color-pale-black;
+	}
 }
 
 @media screen and (min-width: $desktop) {
 	.section-title {
 		font-size: 44px;
+
+		&::before {
+			top: -30px;
+			width: 100px;
+		}
 	}
 }
 

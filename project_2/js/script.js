@@ -5,6 +5,12 @@ AOS.init();
 
 burger.addEventListener('click', openMobileMenu);
 
+function openMobileMenu() {
+	headerMenu.classList.toggle('mobile');
+	burger.classList.toggle('active');
+}
+
+//remove AOS classes for hero's elements
 const heroTitles = document.querySelectorAll('.hero__title');
 const heroSubtitles = document.querySelectorAll('.hero__subtitle');
 
@@ -21,11 +27,7 @@ function removeAOSClassesExceptZeroIndex(array) {
 	});
 }
 
-function openMobileMenu() {
-	headerMenu.classList.toggle('mobile');
-	burger.classList.toggle('active');
-}
-
+//hero splide setup
 let heroSplide = new Splide('#hero-splide', {
 	type: 'loop',
 	autoplay: true,
@@ -55,6 +57,7 @@ heroSplide.on('inactive', (Slide) => {
 
 heroSplide.mount();
 
+//news splide setup
 let newsSplide = new Splide('#news-splide', {
 	type: 'loop',
 	autoplay: true,
@@ -79,20 +82,21 @@ let newsSplide = new Splide('#news-splide', {
 
 newsSplide.mount();
 
+//map setup
 const displayMap = document.getElementById('map');
 
 function initMap(newLat, newLng) {
 	const uluru = { lat: newLat, lng: newLng };
 
 	const map = new google.maps.Map(displayMap, {
-		zoom: 16,
+		zoom: 10,
 		center: uluru,
 		disableDefaultUI: true,
 		styles: [
 			{
 				stylers: [
 					{
-						saturation: -100,
+						saturation: -90,
 					},
 				],
 			},
@@ -118,3 +122,43 @@ function initMap(newLat, newLng) {
 }
 
 window.initMap = initMap(46.48811798529199, 30.74121463237711);
+
+//adding background for header
+const header = document.querySelector('.header');
+const className = 'has-background';
+const scrollTrigger = 60;
+
+window.addEventListener('scroll', function (e) {
+	window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger
+		? header.classList.add(className)
+		: header.classList.remove(className);
+});
+
+//adding active class for nav list
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', navHighlighter);
+
+function navHighlighter() {
+	let scrollY = window.pageYOffset;
+
+	sections.forEach((current) => {
+		const sectionHeight = current.offsetHeight;
+
+		const sectionTop =
+			current.getBoundingClientRect().top + window.pageYOffset - 50;
+		let sectionId = current.getAttribute('id');
+
+		const navItem = header.querySelector(
+			'.nav__item a[href*=' + sectionId + ']'
+		);
+
+		if (navItem) {
+			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+				navItem.classList.add('active');
+			} else {
+				navItem.classList.remove('active');
+			}
+		}
+	});
+}

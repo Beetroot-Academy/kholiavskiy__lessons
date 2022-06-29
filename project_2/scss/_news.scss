@@ -28,6 +28,10 @@
 	&__title {
 		margin-bottom: 50px;
 		color: $color-white;
+
+		&::before {
+			background: $color-white;
+		}
 	}
 
 	&__splide {

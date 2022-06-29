@@ -64,6 +64,10 @@
 	&__title {
 		text-align: start;
 		margin-bottom: 19px;
+
+		&::before {
+			display: none;
+		}
 	}
 
 	&__description {
