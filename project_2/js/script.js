@@ -88,14 +88,32 @@ function initMap(newLat, newLng) {
 		zoom: 16,
 		center: uluru,
 		disableDefaultUI: true,
+		styles: [
+			{
+				stylers: [
+					{
+						saturation: -100,
+					},
+				],
+			},
+		],
 	});
 
-	const image = 'https://i.ibb.co/Lh8d7SH/location.png';
+	const image = new google.maps.MarkerImage(
+		'../img/purple-dot.png',
+		null, // size
+		null, // origin
+		new google.maps.Point(8, 8), // anchor (move to center of marker)
+		new google.maps.Size(16, 16) // scaled size (required for Retina display icon)
+	);
 
 	const marker = new google.maps.Marker({
+		flat: true,
+		optimized: false,
 		position: uluru,
 		map: map,
 		icon: image,
+		title: 'dot',
 	});
 }
 
