@@ -3,6 +3,7 @@
 
 .projects {
 	overflow: hidden;
+
 	&__container {
 		padding-top: 80px;
 		@include flex-column-align-centered;

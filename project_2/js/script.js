@@ -64,7 +64,7 @@ heroSplide.mount();
 let newsSplide = new Splide('#news-splide', {
 	type: 'loop',
 	autoplay: true,
-	interval: 4000,
+	interval: 3000,
 	perPage: 3,
 	perMove: 1,
 	gap: '30px',
@@ -120,7 +120,7 @@ function initMap(newLat, newLng) {
 		position: uluru,
 		map: map,
 		icon: image,
-		title: 'dot',
+		title: 'We are here!',
 	});
 }
 
@@ -141,7 +141,7 @@ window.addEventListener('scroll', function (e) {
 	}
 });
 
-//adding active class for nav list
+//adding active class for nav list while scrolling
 const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', navHighlighter);

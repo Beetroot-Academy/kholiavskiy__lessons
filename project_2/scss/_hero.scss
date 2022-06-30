@@ -56,14 +56,17 @@
 		color: $color-white;
 		animation: pulse 3.5s ease-out;
 		animation-iteration-count: infinite;
+
 		@keyframes pulse {
 			0% {
 				opacity: 0.5;
 			}
+
 			50% {
 				opacity: 1;
 				bottom: 10%;
 			}
+
 			100% {
 				opacity: 0.5;
 			}
@@ -76,6 +79,7 @@
 		&__title {
 			font-size: 80px;
 		}
+
 		&__subtitle {
 			font-size: 18px;
 		}

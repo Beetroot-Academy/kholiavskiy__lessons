@@ -5,33 +5,23 @@
 		box-shadow: 0 0 0 0 rgba($color-white, 0.8),
 			0 0 0 25px rgba($color-white, 0);
 	}
+
 	50% {
 		box-shadow: 0 0 0 25px rgba($color-white, 0.8),
 			0 0 0 25px rgba($color-white, 0);
 	}
+
 	65% {
 		box-shadow: 0 0 0 25px rgba($color-white, 0.8),
 			0 0 0 50px rgba($color-white, 0.3);
 	}
+
 	100% {
 		box-shadow: 0 0 0 0 rgba($color-white, 0.8), 0 0 0 0 rgba($color-white, 0);
 	}
 }
 
-//var 2
-// @keyframes pulse-map {
-// 	0% {
-// 		box-shadow: 0 0 0 0 rgba($color-white, 0);
-// 	}
-// 	50% {
-// 		box-shadow: 0 0 0 20px rgba($color-white, 0.8);
-// 	}
-// 	100% {
-// 		box-shadow: 0 0 0 40px rgba($color-white, 0.3);
-// 	}
-// }
-
-#map div[title='dot'] {
+#map div[title='We are here!'] {
 	animation: pulse-map 1.4s linear infinite;
 	border-radius: 50%;
 }
