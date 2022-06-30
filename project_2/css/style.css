@@ -410,6 +410,9 @@ h6 {
   animation: pulse 3.5s ease-out;
   animation-iteration-count: infinite;
 }
+.hero__next-page:hover {
+  animation-play-state: paused;
+}
 @keyframes pulse {
   0% {
     opacity: 0.5;
