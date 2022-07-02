@@ -34,7 +34,7 @@ function removeAOSClassesExceptZeroIndex(array) {
 let heroSplide = new Splide('#hero-splide', {
 	type: 'loop',
 	autoplay: true,
-	interval: 2500,
+	interval: 4000,
 	perPage: 1,
 	width: '100vw',
 	height: '100vh',
