@@ -34,7 +34,7 @@ function removeAOSClassesExceptZeroIndex(array) {
 let heroSplide = new Splide('#hero-splide', {
 	type: 'loop',
 	autoplay: true,
-	interval: 4000,
+	interval: 2500,
 	perPage: 1,
 	width: '100vw',
 	height: '100vh',
@@ -42,6 +42,7 @@ let heroSplide = new Splide('#hero-splide', {
 	arrows: false,
 	paginationDirection: 'ttb',
 	direction: 'ttb',
+	pauseOnHover: false,
 });
 
 heroSplide.on('active', (Slide) => {
@@ -64,7 +65,7 @@ heroSplide.mount();
 let newsSplide = new Splide('#news-splide', {
 	type: 'loop',
 	autoplay: true,
-	interval: 3000,
+	interval: 4000,
 	perPage: 3,
 	perMove: 1,
 	gap: '30px',
@@ -140,32 +141,3 @@ window.addEventListener('scroll', function (e) {
 		header.classList.remove(className);
 	}
 });
-
-//adding active class for nav list while scrolling
-const sections = document.querySelectorAll('section[id]');
-
-window.addEventListener('scroll', navHighlighter);
-
-function navHighlighter() {
-	let scrollY = window.pageYOffset;
-
-	sections.forEach((current) => {
-		const sectionHeight = current.offsetHeight;
-
-		const sectionTop =
-			current.getBoundingClientRect().top + window.pageYOffset - 50;
-		let sectionId = current.getAttribute('id');
-
-		const navItem = header.querySelector(
-			'.nav__item a[href*=' + sectionId + ']'
-		);
-
-		if (navItem) {
-			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-				navItem.classList.add('active');
-			} else {
-				navItem.classList.remove('active');
-			}
-		}
-	});
-}

@@ -331,6 +331,9 @@ h6 {
   }
 }
 @media screen and (min-width: 1200px) {
+  .header {
+    position: absolute;
+  }
   .header__container {
     padding-top: 53px;
   }

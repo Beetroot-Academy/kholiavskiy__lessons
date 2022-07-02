@@ -160,6 +160,8 @@
 
 @media screen and (min-width: $desktop) {
 	.header {
+		position: absolute;
+
 		&__container {
 			padding-top: 53px;
 		}
