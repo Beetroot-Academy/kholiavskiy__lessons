@@ -153,6 +153,10 @@
 			color: $color-pale-black;
 			opacity: 0.5;
 		}
+
+		&:focus {
+			border-bottom: 1px solid $color-purple;
+		}
 	}
 }
 

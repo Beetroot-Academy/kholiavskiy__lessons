@@ -52,9 +52,15 @@
 		/>
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-
+		<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+		></script>
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVA1qnUDoxVqoT6foVbBmE-uHKQ64P3Bk"
+		></script>
 		<script defer src="./js/script.js"></script>
 		<script defer src="js/fslightbox.js"></script>
 	</head>
@@ -68,16 +74,16 @@
 					<nav class="nav header__nav">
 						<ul class="nav__list">
 							<li class="nav__item">
-								<a href="#" class="nav__link active">ABOUT US</a>
+								<a href="#" class="nav__link active">About us</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">PROJECTS</a>
+								<a href="#" class="nav__link">Projects </a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">NEWS</a>
+								<a href="#" class="nav__link">News </a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">CONTACTs</a>
+								<a href="#" class="nav__link">Contacts </a>
 							</li>
 						</ul>
 					</nav>
@@ -112,14 +118,14 @@
 										data-aos-once="true"
 										class="hero__title"
 									>
-										modern & simple
+										Modern & simple
 									</h2>
 									<span
 										data-aos="fade-up"
 										data-aos-once="true"
 										class="hero__subtitle"
 									>
-										WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+										We make the world beautiful everyday
 									</span>
 								</div>
 								<img src="./img/hero-back.png" alt="background" />
@@ -131,14 +137,14 @@
 										data-aos="zoom-out"
 										class="hero__title"
 									>
-										EVEN MORE BUILDINGS
+										Even more buildings
 									</h2>
 									<span
 										data-aos-once="true"
 										data-aos="fade-up"
 										class="hero__subtitle"
 									>
-										TAKE A LOOK AT OUR GALLERY OF BUILDINGS
+										Take a look at our ga45453llery of bu11ildings.
 									</span>
 								</div>
 								<img src="./img/hero-back.png" alt="background" />
@@ -150,14 +156,14 @@
 										data-aos="zoom-out"
 										class="hero__title"
 									>
-										BUILDINGS & TOWERS
+										Buildings & towers
 									</h2>
 									<span
 										data-aos-once="true"
 										data-aos="fade-up"
 										class="hero__subtitle"
 									>
-										WE HAVE BUILDINGS IN THE PROJECTS
+										We have buildings in the projects
 									</span>
 								</div>
 								<img src="./img/hero-back.png" alt="background" />
@@ -171,7 +177,7 @@
 			</section>
 			<section class="projects" id="projects">
 				<div class="container projects__container">
-					<h2 class="section-title projects__title">WHAT WE DO</h2>
+					<h2 class="section-title projects__title">What we do</h2>
 					<div class="projects__item project">
 						<div data-aos="fade-right" class="project__photo">
 							<img src="./img/trade-center.png" alt="trade center" />
@@ -182,14 +188,14 @@
 							class="project__photo-shadow"
 						></div>
 						<div class="project__content">
-							<h3 class="project__subtitle">ONE WORLD</h3>
-							<h3 class="project__title section-title">TRADE CENTER</h3>
+							<h3 class="project__subtitle">One world</h3>
+							<h3 class="project__title section-title">Trade center</h3>
 							<p class="project__description">
 								Increasing prosperity in our lives can be accomplished by having
 								the right frame of mind. The truth is, our thoughts are very
 								powerful.
 							</p>
-							<button class="main-button project__details">MORE DETAILS</button>
+							<button class="main-button project__details">More details</button>
 							<span class="project__location"
 								>New York City, United States - 1776 feet</span
 							>
@@ -205,14 +211,14 @@
 							class="project__photo-shadow project__photo-shadow--purple"
 						></div>
 						<div class="project__content">
-							<span class="project__subtitle">INTERNAtIONAL</span>
-							<h3 class="project__title section-title">COMMERCE CeNTRE</h3>
+							<span class="project__subtitle">International</span>
+							<h3 class="project__title section-title">Commerce centre</h3>
 							<p class="project__description">
 								Successful businesses have many things in common, today we’ll
 								look at the big ‘R’ of recognition and how a digital advertising
 								network may help.
 							</p>
-							<button class="main-button project__details">MORE DETAILS</button>
+							<button class="main-button project__details">More details</button>
 							<span class="project__location">Hong Kong - 1588 feet</span>
 						</div>
 					</div>
@@ -428,7 +434,7 @@
 			</section>
 			<section class="gallery" id="gallery">
 				<div class="container gallery__container">
-					<h2 class="section-title gallery__title">gallery</h2>
+					<h2 class="section-title gallery__title">Gallery</h2>
 					<div class="photos gallery__photos">
 						<a
 							data-aos="fade-down-right"
@@ -478,19 +484,21 @@
 							</a>
 						</div>
 					</div>
-					<button class="main-button gallery__btn">see more</button>
+					<button class="main-button gallery__btn">See more</button>
 				</div>
 			</section>
 			<section class="contacts-section" id="contacts">
 				<div class="contacts-section__map" id="map"></div>
 				<div class="form-wrapper contacts-section__form-wrapper">
-					<h2 class="section-title form-wrapper__title">GET IN TOUCH</h2>
+					<h2 class="section-title form-wrapper__title">Get in touch</h2>
 					<div class="form-wrapper__content">
 						<div class="form-wrapper__contacts contacts">
 							<ul class="contacts__list">
 								<li class="contacts__item">
 									<a class="contacts__props" href="#">
-										<span class="fas fa-map-marker-alt contacts__icon"></span>
+										<address
+											class="fas fa-map-marker-alt contacts__icon"
+										></address>
 										91 Nolan Extensions Suite 670
 									</a>
 								</li>
@@ -563,6 +571,5 @@
 				<span class="copyright">Copyrights &copy; 2020 Montichello</span>
 			</div>
 		</footer>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVA1qnUDoxVqoT6foVbBmE-uHKQ64P3Bk"></script>
 	</body>
 </html>

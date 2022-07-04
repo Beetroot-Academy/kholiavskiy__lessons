@@ -43,6 +43,12 @@ let heroSplide = new Splide('#hero-splide', {
 	paginationDirection: 'ttb',
 	direction: 'ttb',
 	pauseOnHover: false,
+	breakpoints: {
+		800: {
+			drag: false,
+			pagination: false,
+		},
+	},
 });
 
 heroSplide.on('active', (Slide) => {
@@ -69,6 +75,8 @@ let newsSplide = new Splide('#news-splide', {
 	perPage: 3,
 	perMove: 1,
 	gap: '30px',
+	rewind: true,
+	rewindByDrag: true,
 	breakpoints: {
 		1375: {
 			arrows: false,
@@ -108,7 +116,7 @@ function initMap(newLat, newLng) {
 	});
 
 	const image = new google.maps.MarkerImage(
-		'../img/purple-dot.png',
+		'./img/purple-dot.png',
 		null, // size
 		null, // origin
 		new google.maps.Point(8, 8), // anchor (move to center of marker)
