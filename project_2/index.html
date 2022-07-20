@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Monticello</title>
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./img/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./img/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="./img/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#603cba" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital@0;1&family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<script
+			src="https://kit.fontawesome.com/4f6c80e6c3.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+		></script>
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVA1qnUDoxVqoT6foVbBmE-uHKQ64P3Bk"
+		></script>
+		<script defer src="./js/script.js"></script>
+		<script defer src="js/fslightbox.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container header__container">
+				<a href="#" class="logo header__logo">
+					<img src="./img/logo.svg" alt="logo" class="logo__item" />
+				</a>
+				<div class="header__menu">
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link active">About us</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Projects </a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">News </a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Contacts </a>
+							</li>
+						</ul>
+					</nav>
+					<ul class="header__smm smm">
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-facebook-f smm__link"></a>
+						</li>
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-twitter smm__link"></a>
+						</li>
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-instagram smm__link"> </a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__burger burger">
+					<span class="burger__item burger__top"></span>
+					<span class="burger__item burger__mid"></span>
+					<span class="burger__item burger__bot"></span>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero" id="hero">
+				<div class="splide" role="group" id="hero-splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos="zoom-out"
+										data-aos-once="true"
+										class="hero__title"
+									>
+										Modern & simple
+									</h2>
+									<span
+										data-aos="fade-up"
+										data-aos-once="true"
+										class="hero__subtitle"
+									>
+										We make the world beautiful everyday
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos-once="true"
+										data-aos="zoom-out"
+										class="hero__title"
+									>
+										Even more buildings
+									</h2>
+									<span
+										data-aos-once="true"
+										data-aos="fade-up"
+										class="hero__subtitle"
+									>
+										Take a look at our ga45453llery of bu11ildings.
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h2
+										data-aos-once="true"
+										data-aos="zoom-out"
+										class="hero__title"
+									>
+										Buildings & towers
+									</h2>
+									<span
+										data-aos-once="true"
+										data-aos="fade-up"
+										class="hero__subtitle"
+									>
+										We have buildings in the projects
+									</span>
+								</div>
+								<img src="./img/hero-back.png" alt="background" />
+							</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#projects" class="material-symbols-outlined hero__next-page">
+					expand_more
+				</a>
+			</section>
+			<section class="projects" id="projects">
+				<div class="container projects__container">
+					<h2 class="section-title projects__title">What we do</h2>
+					<div class="projects__item project">
+						<div data-aos="fade-right" class="project__photo">
+							<img src="./img/trade-center.png" alt="trade center" />
+						</div>
+						<div
+							data-aos="fade-down-right"
+							data-aos-delay="200"
+							class="project__photo-shadow"
+						></div>
+						<div class="project__content">
+							<h3 class="project__subtitle">One world</h3>
+							<h3 class="project__title section-title">Trade center</h3>
+							<p class="project__description">
+								Increasing prosperity in our lives can be accomplished by having
+								the right frame of mind. The truth is, our thoughts are very
+								powerful.
+							</p>
+							<button class="main-button project__details">More details</button>
+							<span class="project__location"
+								>New York City, United States - 1776 feet</span
+							>
+						</div>
+					</div>
+					<div class="projects__item project project--reverse">
+						<div data-aos="fade-left" class="project__photo">
+							<img src="./img/commerce-center.png" alt="commerce center" />
+						</div>
+						<div
+							data-aos="fade-down-left"
+							data-aos-delay="200"
+							class="project__photo-shadow project__photo-shadow--purple"
+						></div>
+						<div class="project__content">
+							<span class="project__subtitle">International</span>
+							<h3 class="project__title section-title">Commerce centre</h3>
+							<p class="project__description">
+								Successful businesses have many things in common, today we’ll
+								look at the big ‘R’ of recognition and how a digital advertising
+								network may help.
+							</p>
+							<button class="main-button project__details">More details</button>
+							<span class="project__location">Hong Kong - 1588 feet</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news" id="news">
+				<div class="container news__container">
+					<h2 class="section-title news__title">LATEST NEWS</h2>
+					<div class="splide news__splide" role="group" id="news-splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/news-1.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												SEE THE UNMATCHED BEAUTY OF THE GREAT.
+											</h3>
+											<p class="article__description">
+												Free directories: directories are perfect for customers
+												that are searching for...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-1.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">ALJA BRUN</span>
+													<time class="user__date" datetime="2020-01-20 00:00"
+														>20 Jan 2020</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/new-2.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												EFFECTIVE ADVERTISING POINTERS.
+											</h3>
+											<p class="article__description">
+												Having a home based business is a wonderful asset to
+												your life...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-3.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">DOMINIC FREEMAN</span>
+													<time class="user__date" datetime="2019-12-13 00:00"
+														>13 Dec 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/news-3.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												HYPNOTIZE YOURSELF INTO THE GHOST.
+											</h3>
+											<p class="article__description">
+												There are many things that are important to catalog
+												design...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-2.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">ALICE WARD</span>
+													<time class="user__date" datetime="2019-11-30 00:00"
+														>30 Nov 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/new-2.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												EFFECTIVE ADVERTISING POINTERS.
+											</h3>
+											<p class="article__description">
+												Having a home based business is a wonderful asset to
+												your life...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-3.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">DOMINIC FREEMAN</span>
+													<time class="user__date" datetime="2019-12-13 00:00"
+														>13 Dec 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/news-3.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												HYPNOTIZE YOURSELF INTO THE GHOST.
+											</h3>
+											<p class="article__description">
+												There are many things that are important to catalog
+												design...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-2.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">ALICE WARD</span>
+													<time class="user__date" datetime="2019-11-30 00:00"
+														>30 Nov 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/news-3.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												HYPNOTIZE YOURSELF INTO THE GHOST.
+											</h3>
+											<p class="article__description">
+												There are many things that are important to catalog
+												design...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-2.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">ALICE WARD</span>
+													<time class="user__date" datetime="2019-11-30 00:00"
+														>30 Nov 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide news__splide__slide">
+									<a class="article" href="#">
+										<div class="article__image">
+											<img src="./img/news-3.png" alt="home" />
+										</div>
+										<div class="article__content">
+											<h3 class="article__title">
+												HYPNOTIZE YOURSELF INTO THE GHOST.
+											</h3>
+											<p class="article__description">
+												There are many things that are important to catalog
+												design...
+											</p>
+											<div class="user article__user">
+												<div class="user__image">
+													<img src="./img/user-photo-2.png" alt="user" />
+												</div>
+												<div class="user__info">
+													<span class="user__name">ALICE WARD</span>
+													<time class="user__date" datetime="2019-11-30 00:00"
+														>30 Nov 2019</time
+													>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="splide__arrows splide__arrows--ltr">
+							<button class="splide__arrow splide__arrow--prev" type="button">
+								<span class="material-symbols-outlined"> chevron_left </span>
+							</button>
+							<button class="splide__arrow splide__arrow--next" type="button">
+								<span class="material-symbols-outlined"> chevron_right </span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gallery" id="gallery">
+				<div class="container gallery__container">
+					<h2 class="section-title gallery__title">Gallery</h2>
+					<div class="photos gallery__photos">
+						<a
+							data-aos="fade-down-right"
+							data-aos-delay="100"
+							data-fslightbox
+							href="./img/gallary-1.png"
+							class="photos__item photos__item--big"
+						>
+							<img src="./img/gallary-1.png" alt="photo" />
+						</a>
+						<div class="photos__grid-block">
+							<a
+								data-aos="fade-down-left"
+								data-aos-delay="250"
+								data-fslightbox
+								href="./img/gallery-2.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-2.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-down-left"
+								data-aos-delay="300"
+								data-fslightbox
+								href="./img/gallery-3.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-3.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-up-left"
+								data-aos-delay="200"
+								data-fslightbox
+								href="./img/gallery-4.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-4.png" alt="photo" />
+							</a>
+							<a
+								data-aos="fade-up-left"
+								data-aos-delay="350"
+								data-fslightbox
+								href="./img/gallery-5.png"
+								class="photos__item"
+							>
+								<img src="./img/gallery-5.png" alt="photo" />
+							</a>
+						</div>
+					</div>
+					<button class="main-button gallery__btn">See more</button>
+				</div>
+			</section>
+			<section class="contacts-section" id="contacts">
+				<div class="contacts-section__map" id="map"></div>
+				<div class="form-wrapper contacts-section__form-wrapper">
+					<h2 class="section-title form-wrapper__title">Get in touch</h2>
+					<div class="form-wrapper__content">
+						<div class="form-wrapper__contacts contacts">
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<a class="contacts__props" href="#">
+										<address
+											class="fas fa-map-marker-alt contacts__icon"
+										></address>
+										91 Nolan Extensions Suite 670
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a class="contacts__props" href="tel:+0013568682454">
+										<span class="fas fa-phone-alt contacts__icon"></span>
+										+001 356-868-2454
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a
+										class="contacts__props"
+										href="mailto:montichello@service.com"
+									>
+										<span class="fas fa-inbox contacts__icon"></span>
+										montichello@service.com
+									</a>
+								</li>
+								<li class="contacts__item">
+									<span class="contacts__props">
+										<span class="far fa-clock contacts__icon"></span>
+										From 07:05AM to 19:30PM
+									</span>
+								</li>
+							</ul>
+						</div>
+						<form class="form-wrapper__form form">
+							<input
+								class="form__input"
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Name"
+								required
+							/>
+							<input
+								type="email"
+								name="maile"
+								id="mail"
+								class="form__input"
+								placeholder="Email"
+								required
+							/>
+							<button class="main-button form-wrapper__btn" type="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="footer__content">
+					<a href="#" class="logo footer__logo">
+						<img src="./img/logo.svg" alt="logo" class="logo__item" />
+					</a>
+					<ul class="footer__smm smm">
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-facebook-f smm__link"></a>
+						</li>
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-twitter smm__link"></a>
+						</li>
+						<li class="smm__item">
+							<a href="#" class="fa fa-brands fa-instagram smm__link"> </a>
+						</li>
+					</ul>
+				</div>
+				<span class="copyright">Copyrights &copy; 2020 Montichello</span>
+			</div>
+		</footer>
+	</body>
+</html>

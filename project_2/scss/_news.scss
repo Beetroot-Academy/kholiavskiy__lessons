@@ -1,0 +1,158 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.news {
+	background-image: url(../img/news-back.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	position: relative;
+
+	&__container {
+		padding-top: 80px;
+		padding-bottom: 100px;
+
+		&::before {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		color: $color-white;
+
+		&::before {
+			background: $color-white;
+		}
+	}
+
+	&__splide {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.news {
+		&__container {
+			padding-top: 150px;
+			padding-bottom: 170px;
+		}
+
+		&__title {
+			margin-bottom: 90px;
+		}
+	}
+}
+
+.article {
+	display: block;
+	background: $color-white;
+	max-width: 370px;
+	min-height: 514px;
+	padding-bottom: 30px;
+
+	&__image {
+		max-width: 370px;
+		width: 100%;
+		min-height: 240px;
+		margin-bottom: 30px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	&__content {
+		padding: 0 20px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 22px;
+		color: $color-pale-black;
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		font-family: 'Open Sans';
+		font-size: 18px;
+		line-height: 1.39;
+		color: $color-pale-black;
+		margin-bottom: 39px;
+	}
+}
+
+.user {
+	display: flex;
+	gap: 20px;
+
+	&__image {
+		@include wh(60px);
+		border-radius: 50%;
+
+		img {
+			border-radius: 50%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 6px;
+	}
+
+	&__name {
+		font-size: 18px;
+		color: $color-pale-black;
+	}
+
+	&__date {
+		font-size: 14px;
+		color: $color-blue;
+	}
+}
+
+.news .splide__pagination {
+	bottom: -60px;
+}
+
+.splide__arrows {
+	.splide__arrow {
+		@include wh(40px);
+		background: transparent;
+		border: 1px solid rgba($color-white, 0.5);
+		opacity: 1;
+		transition: transform 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&--next {
+			right: -100px;
+		}
+
+		&--prev {
+			left: -100px;
+		}
+	}
+
+	.material-symbols-outlined {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1;
+		color: $color-white;
+	}
+}
