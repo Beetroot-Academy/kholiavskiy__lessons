@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>hw-26</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/4f6c80e6c3.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container header__container">
+				<a class="header__logo-link" href="#">
+					<svg class="logo">
+						<use xlink:href="./img/sprite.svg#logo"></use>
+					</svg>
+				</a>
+				<nav class="nav header_nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link nav__link--active">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Catalog</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">News</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="site-overlay"></div>
+				<div class="icons header__icons">
+					<svg class="icons__icon icons__search">
+						<use xlink:href="./img/sprite.svg#search"></use>
+					</svg>
+					<svg class="icons__icon icons__profile">
+						<use xlink:href="./img/sprite.svg#profile"></use>
+					</svg>
+					<div class="menu icons__menu">
+						<span class="menu__bar menu__bar--top"></span>
+						<span class="menu__bar menu__bar--mid"></span>
+						<span class="menu__bar menu__bar--bot"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="splide" id="hero-splide" role="group">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">discover new options</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero.png" alt="slide 1" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">expand your horizons</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero-2.png" alt="slide 2" />
+							</li>
+							<li class="splide__slide">
+								<div class="container hero__container">
+									<h1 class="main-heading hero__title">Find your own style</h1>
+									<button class="btn hero__btn">View more</button>
+								</div>
+								<img src="./img/hero-3.png" alt="slide 3" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="new-arrivals">
+				<div class="container new-arrivals__container">
+					<h2 class="section-heading new-arrivals__title">new arrivals</h2>
+					<div class="splide" role="group" id="new-arrivals">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide shop-slide">
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-1.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Hagstrom Alvar Limited Edition
+											</h3>
+											<span class="shop-slide__price">€2.990,00</span>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide shop-slide">
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-2.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Hagstrom Tremar Viking Deluxe Cloudy Seas
+											</h3>
+											<span class="shop-slide__price">€1.300,00</span>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide shop-slide shop-slide--sold">
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">sold</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-3.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Gibson Les Paul Standard 60s
+											</h3>
+											<span class="shop-slide__price">€3.749,00</span>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide shop-slide">
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-4.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Suhr Standard Plus Trans Blue Denim
+											</h3>
+											<span class="shop-slide__price">€3.449,00</span>
+										</div>
+									</a>
+								</li>
+								<li class="splide__slide shop-slide">
+									<a href="#" class="shop-slide__link">
+										<span class="shop-slide__label">in stock</span>
+										<div class="shop-slide__img-wrapper">
+											<img src="./img/product-5.png" alt="product" />
+											<h3 class="shop-slide__title">
+												Fender Telecaster Black Paisley Limited Edition
+											</h3>
+											<span class="shop-slide__price">€1.449,00</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="splide__arrows splide__arrows--ltr">
+							<button
+								class="splide__arrow splide__arrow--prev"
+								type="button"
+								aria-label="Previous slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#prev"></use>
+								</svg>
+							</button>
+							<button
+								class="splide__arrow splide__arrow--next"
+								type="button"
+								aria-label="Next slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#next"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button class="btn btn--blk new-arrivals__btn">View more</button>
+				</div>
+			</section>
+			<section class="partners">
+				<div class="container partners__container">
+					<h2 class="section-heading partners__title">our partners</h2>
+					<div class="splide" role="group" id="partnes-splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<img src="./img/partner-1.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-2.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-3.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-4.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-5.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-6.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-7.png" alt="partner" />
+								</li>
+								<li class="splide__slide">
+									<img src="./img/partner-8.png" alt="partner" />
+								</li>
+							</ul>
+						</div>
+						<div class="splide__arrows splide__arrows--ltr">
+							<button
+								class="splide__arrow splide__arrow--prev"
+								type="button"
+								aria-label="Previous slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#prev"></use>
+								</svg>
+							</button>
+							<button
+								class="splide__arrow splide__arrow--next"
+								type="button"
+								aria-label="Next slide"
+								aria-controls="splide01-track"
+							>
+								<svg class="icon">
+									<use xlink:href="./img/sprite.svg#next"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<a class="footer__logo-link" href="#">
+					<svg class="logo footer__logo">
+						<use xlink:href="./img/sprite.svg#logo"></use>
+					</svg>
+				</a>
+				<div class="footer__content">
+					<div class="footer__nav-wrapper">
+						<a class="footer__logo-link--desktop" href="#">
+							<svg class="logo footer__logo">
+								<use xlink:href="./img/sprite.svg#logo"></use>
+							</svg>
+						</a>
+
+						<nav class="footer__nav nav-footer">
+							<ul class="nav-footer__list">
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Home</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Catalog</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">News</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" class="nav-footer__link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="contacts footer__contacts">
+						<h4 class="contacts__title">Contact Us</h4>
+						<ul class="smm contacts__smm">
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-instagram"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-facebook-f"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-pinterest-p"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-twitter"> </a>
+							</li>
+							<li class="smm__item">
+								<a href="#" class="smm__link fa fa-brands fa-youtube"> </a>
+							</li>
+						</ul>
+						<a class="contacts__tel" href="tel:+08003004040">0800 300 4040</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright-block">
+				<span class="footer__copyright"
+					>© Copyright 2022. All rights reserved.</span
+				>
+			</div>
+		</footer>
+	</body>
+</html>

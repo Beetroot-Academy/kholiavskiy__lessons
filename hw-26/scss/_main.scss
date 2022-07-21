@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@media screen and (min-width: $tablet) {
+	.container {
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.btn {
+	min-width: 154px;
+	min-height: 40px;
+	border: 2px solid $brown-light;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: transparent;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--blk {
+		border-color: $black;
+		color: $black;
+	}
+
+	&:hover {
+		color: #ffffff;
+		background: $tomato-light;
+		border-color: $tomato-light;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.btn {
+		min-width: 227px;
+		min-height: 50px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+.section-heading {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $black;
+}
+
+@media screen and (min-width: $desktop) {
+	.section-heading {
+		font-size: 32px;
+		line-height: 39px;
+	}
+}
+
+.splide__pagination {
+	z-index: 0;
+}

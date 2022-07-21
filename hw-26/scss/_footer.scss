@@ -1,0 +1,183 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.nav-footer {
+	&__item:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: $brown-light;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $tomato-light;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.nav-footer {
+		&__link {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 15px;
+
+	&__title,
+	&__tel {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: $brown-light;
+		transition: color 0.2s;
+	}
+
+	&__tel:hover {
+		color: $tomato-light;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.contacts {
+		justify-content: flex-end;
+
+		&__title {
+			margin-bottom: 48px;
+		}
+
+		&__smm {
+			margin-bottom: 30px;
+		}
+
+		&__title,
+		&__tel {
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+}
+
+.smm {
+	display: flex;
+	gap: 20px;
+
+	&__link {
+		font-size: 20px;
+		color: $brown-light;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $tomato-light;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.smm {
+		gap: 25px;
+
+		&__link {
+			font-size: 30px;
+		}
+	}
+}
+
+.footer {
+	background: $brown-dark;
+	padding-bottom: 20px;
+
+	&__container {
+		padding-top: 50px;
+	}
+
+	&__logo-link {
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+		margin-bottom: 40px;
+
+		&--desktop {
+			display: none;
+		}
+	}
+
+	&__logo {
+		fill: white;
+		width: 150px;
+		height: 30px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	&__copyright {
+		display: block;
+		margin: 0 auto;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: center;
+		color: $brown-light;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+	.footer {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__logo-link {
+			margin: 0;
+		}
+
+		&__content {
+			gap: 160px;
+			margin-bottom: 40px;
+		}
+
+		&__copyright {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.footer {
+		&__container {
+			display: block;
+			padding: 0 30px;
+			padding-top: 70px;
+		}
+
+		&__content {
+			gap: 0;
+			margin-bottom: 50px;
+		}
+
+		&__logo-link {
+			display: none;
+
+			&--desktop {
+				display: block;
+				margin-bottom: 35px;
+			}
+		}
+	}
+}
